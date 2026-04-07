@@ -31,7 +31,7 @@ That is why the article is less worried about an immediate economic collapse and
 
 ## Why the article thinks inflation is back on the table
 
-The immediate trigger is the disruption in energy markets caused by the war. The article says oil flows through the Strait of Hormuz are still far below normal, and energy infrastructure around the region has also been hit. As a result, Brent crude has jumped from about $60 at the start of the year to around $100 a barrel.
+The immediate trigger is the disruption in energy markets caused by the war. The article says oil flows through the Strait of Hormuz are still far below normal, and energy infrastructure around the region has also been hit. As a result, Brent crude has jumped from about \$60 at the start of the year to around \$100 a barrel.
 
 The article uses a simple rule of thumb: a lasting $10 rise in oil prices can add about 0.3 to 0.4 percentage points to inflation. If oil stays around current levels, inflation across the rich world could move back above 4%. If prices climb much further, inflation could become much more painful.
 
