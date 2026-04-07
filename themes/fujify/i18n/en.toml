@@ -1,0 +1,58 @@
+[sidebarToc]
+    other = "Table of Contents"
+
+[sidebarPages]
+    other = "Categories"
+
+[sidebarTags]
+    other = "Tags"
+
+[sidebarLinks]
+    other = "External Links"
+
+[sidebarBangumiChart]
+    other = "Bangumi"
+
+[footerPoweredFront]
+    other = "Powered by "
+
+[footerPoweredEnd]
+    other = " "
+
+[postMetaNoTag]
+    other = "No tag"
+
+[postMetaWordCount]
+    one = "{{.Count}} word"
+    other = "{{.Count}} words"
+
+[postMetaReadingTime]
+    one = "{{.Count}} minute"
+    other = "{{.Count}} minutes"
+
+[postCopyrightFront]
+    other = "Unless otherwise noted, the content of this site is licensed under "
+
+[postCopyrightEnd]
+    other = "."
+
+[postComment]
+    other = "Load comments"
+
+[archivesTotalPages]
+    other = "Total posts: "
+
+[tagsCurrentTag]
+    other = "#{{ .Title }}"
+
+[searchSuccess]
+    other = "[NUM] results ([TIME] ms)"
+
+[searchNotFound]
+    other = "Results not found"
+
+[searchFailed]
+    other = "Failed to load index file"
+
+[sidebarTranslations]
+    other = "Change Language"

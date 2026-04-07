@@ -1,0 +1,13 @@
+{
+  "baseFontSize": 20,
+  "cssTheme": "Big Sur Aesthetic",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "backimg",
+    "test",
+    "coffee"
+  ],
+  "theme": "obsidian",
+  "accentColor": "",
+  "nativeMenus": false
+}

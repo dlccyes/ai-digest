@@ -1,0 +1,216 @@
+.theme-dark {
+  /*blue nebula*/
+  /*background-image: url(https://i.imgur.com/C90lb3z.jpg) !important;*/
+  /*purple nebula*/
+  /*background-image: url(https://i.imgur.com/hAcGmG3.jpg) !important;    */
+  /* interstellar */
+  background-image: url("https://i.imgur.com/ZmRW80b.jpg") !important;
+  /* interstellar 2 */
+  /* background-image: url("https://i.imgur.com/6vsxbtB.jpg") !important; */
+  /*false hope*/
+  /*background-image: url("https://i.imgur.com/FS1SsUU.jpg") !important;*/
+  /*egypt project*/
+  /*background-image: url("https://i.imgur.com/LykyHH7.jpg") !important;*/
+  background-size: cover;
+  background-position: 0% 90%;
+  --bgcolor: #00000058;
+  --background-primary: var(--bgcolor);
+  --background-secondary: #2c0f0fe9;
+  --background-secondary-alt: var(--bgcolor);
+  --text-selection: #f7925b52;
+  --text-highlight-bg: rgb(232 149 106 / 53%);
+  /* search highlight */
+  --text-normal: #ead3a7;
+  --font-normal-text: "Baloo Paaji 2", "Myuppy", sans-serif;
+  --font-mono-text: "Consolas", Hack, monospace;
+  --brownieo #99581cd0
+}
+
+body {
+  color: var(--text-normal);
+  font-family: var(--font-normal-text);
+}
+
+strong, .cm-s-obsidian .cm-strong, .theme-dark b {
+    color: #fff8f2 !important;
+}
+
+.markdown-preview-view {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.cm-s-obsidian {
+  line-height: 1.8 !important;
+}
+
+/* bullet list i.e. unordered list text color */
+.theme-dark ul>li {
+  color: var(--text-normal) !important;
+}
+
+/* ordered list text color */
+.theme-dark ol>li {
+  color: var(--text-normal) !important;
+}
+
+.menu,
+.popover,
+.suggestion-container {
+  background-color: #2a0404dd !important;
+  border-radius: 20px;
+  border: 1px solid #79531a;
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-family: var(--font-normal-text) !important;
+}
+
+
+/*
+.multi-select-pill, .multi-select-pill-remove-button {
+    color: var(--brownie);
+}
+*/
+
+.markdown-preview-view blockquote {
+  font-family: var(--font-normal-text) !important;
+  color: #e1ca9d;
+  border-left: 3px solid var(--brownie);
+}
+
+.cm-hmd-frontmatter {
+  font-family: var(--font-mono-text) !important;
+}
+
+a:hover,
+.cm-url,
+.cm-hmd-internal-link:hover {
+  color: #d0c759 !important;
+}
+
+.status-bar {
+  background-color: #230101b8;
+}
+
+.view-header {
+  background: #230101aa;
+}
+
+.workspace-ribbon.mod-left {
+  border: none !important;
+  background: linear-gradient(to top, #191715bf, #3d2607bf);
+}
+
+img {
+  max-height: 700px;
+}
+
+/* img and description centered */
+img, .center {
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+/* image description text */
+.center {
+  width: fit-content;
+  max-width: 500px;
+}
+
+img.img-view {
+  transform: translate(0%);
+  left: 0%;
+}
+
+.popover.hover-popover,
+.markdown-embed {
+  max-height: 600px;
+  height: 600px !important;
+  /*min-height: 600px;*/
+  width: 500px;
+}
+
+/* inline code preview*/
+.markdown-preview-section pre code,
+.markdown-preview-section code {
+  font-size: 0.9em !important;
+  background-color: #372611 !important;
+  font-family: var(--font-mono-text) !important;
+}
+
+/* inline code edit */
+.cm-s-obsidian span.cm-inline-code {
+  font-family: var(--font-mono-text) !important;
+}
+
+/* codeblock edit */
+.cm-s-obsidian .HyperMD-codeblock,
+.markdown-preview-view code,
+.cm-s-obsidian .cm-inline-code {
+  font-family: var(--font-mono-text) !important;
+}
+
+/* image tool tip scale percent number */
+.img-tip {
+  display: none;
+}
+
+[aria-label="Preview (Ctrl+Click to open in new pane)"] {
+  opacity: 1 !important;
+}
+
+.cm-header-1,
+.markdown-preview-section h1 {}
+
+.cm-header-2,
+.markdown-preview-section h2 {
+  color: #ffe5ce !important;
+}
+
+.cm-header-3,
+.markdown-preview-section h3 {
+  color: #ffd8a8 !important;
+}
+
+.cm-header-4,
+.markdown-preview-section h4 {
+  color: #ffca90 !important;
+}
+
+.cm-header-5,
+.markdown-preview-section h5 {
+  color: #ffb154 !important;
+}
+
+.cm-header-6,
+.markdown-preview-section h6 {
+  color: #ff9f23 !important;
+}
+
+.theme-dark a {
+  color: #f0e44f !important;
+}
+
+
+/* edit mode link color */
+.theme-dark a:hover,
+.theme-dark .cm-url,
+.theme-dark .cm-hmd-internal-link:hover {
+  color: #f5b069 !important;
+  text-decoration: none !important;
+}
+
+/* edit mode width */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+  max-width: 700px !important;
+}
+
+/* preview mode width */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: 700px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+

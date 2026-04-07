@@ -1,0 +1,67 @@
+// Override variables with that file
+@import '_custom'; // Keep that for back-compatibility. This shouldn't be used anymore.
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+
+$font-size-0: 2em !default; // 16px->32px
+$font-size-1: 1.75em !default; // 16px->28px #
+$font-size-2: 1.5em !default; // 16px->24px ##
+$font-size-3: 1.25em !default; // 16px->20px ###
+$font-size-4: 1em !default; // 16px->16px ####
+
+// used primer variables
+// @primer/css/support/variables/misc.scss
+$font-weight-bold: 600;
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 400;
+$body-font: Lato, "Noto Sans TC", -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Arial', 'Helvetica Neue',
+  'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC',
+  'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif !default;
+$mono-font: 'SF Mono', 'Fira Code', 'Consolas', -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+  'Segoe UI', 'Arial', 'Helvetica Neue', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB',
+  'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', monospace !default;
+$title-font: 'Product Sans', sans-serif !default;
+$body-font-size: 18px !default;
+
+$width-md: 768px;
+
+$light-color-primary: #9b7050ed !default; // https://irocore.com/aofuji/
+$light-color-secondary: #d76a6ae3 !default; // https://irocore.com/fujimurasaki/
+$light-color-third: #d76a6ae3 !default; // https://irocore.com/fujimurasaki/
+$light-color-focus: #9d2e2e !default; // https://irocore.com/aomurasaki/
+$light-color-mute: #9b6060 !default; // https://irocore.com/suzu-iro/
+$light-color-font: #3f4551 !default; // https://irocore.com/konnezu/
+$light-color-divider: #8c2f2f85 !default; // https://irocore.com/komachinezu/
+$light-color-bg: #fffffd !default; // https://irocore.com/shiro/
+$light-color-codebg: #f6f8fa !default; // GitHub
+$light-color-selection: #ffc0b374 !default;
+
+$dark-color-primary: #facacae6 !default; // https://irocore.com/aofuji/
+$dark-color-secondary: #ff9d9d !default; // kai https://irocore.com/fujimurasaki/
+$dark-color-third: #bce2f4e0;
+$dark-color-focus: #ff9e9ef7 !default; // https://irocore.com/shironezumi/
+$dark-color-mute: #bed0d8 !default; // https://irocore.com/suzu-iro/
+$dark-color-font: #ebebeb !default; // https://irocore.com/gin-iro/
+$dark-color-divider: #f0a9a9d5 !default; // Discord
+$dark-color-bg: #251f32 !default; // Discord
+$dark-color-codebg: #0d0d0d !default; // kai GitHub
+$dark-color-selection: #fb525262 !default;
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/fonts/product_sans/product_sans_700.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/fonts/fira_code/fira_code_400.woff2')
+    format('woff2');
+}

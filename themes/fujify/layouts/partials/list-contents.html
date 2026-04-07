@@ -1,0 +1,27 @@
+{{ with .Content }}
+  <div class="well">
+    {{.}}
+  </div>
+{{ end }}
+<!-- homepage range in all posts -->
+{{ $paginator := .Paginator }}
+{{ range $paginator.Pages}}
+  <div class="post">
+      <h2 class="post-item post-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+      <div class="post-item post-meta">
+          {{ partial "post-meta.html" . }}
+      </div>
+      <div class="post-item post-summary markdown-body">
+          {{ if .Truncated }}
+              {{ .Summary }} <a href="{{ .Permalink }}">Continue ...</a>
+          {{ else }}
+              {{ .Content }}
+          {{ end }}
+      </div>
+  </div>
+{{ end }}
+
+{{- partial "pagination.html" (dict "context" . "pagi" .Paginator) -}}
+
