@@ -2,12 +2,52 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script>
 <script>
-  renderMathInElement(document.querySelector('div.content'), {
+  const root = document.querySelector('div.content');
+  const escapedDollarPlaceholder = '__KATEX_ESCAPED_DOLLAR__';
+
+  function walkTextNodes(elem, visitor) {
+    const walker = document.createTreeWalker(
+      elem,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          const tag = parent.tagName.toLowerCase();
+          if (['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option'].includes(tag)) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        },
+      }
+    );
+
+    const nodes = [];
+    while (walker.nextNode()) {
+      nodes.push(walker.currentNode);
+    }
+    nodes.forEach(visitor);
+  }
+
+  walkTextNodes(root, function (node) {
+    node.textContent = node.textContent.replace(/\\\$/g, escapedDollarPlaceholder);
+  });
+
+  renderMathInElement(root, {
     delimiters: [
       { left: '$$', right: '$$', display: true },
       { left: '\\[', right: '\\]', display: true },
       { left: '$', right: '$', display: false },
       { left: '\\(', right: '\\)', display: false },
     ],
+    preProcess: function (math) {
+      return math.replaceAll(escapedDollarPlaceholder, '$');
+    },
+  });
+
+  walkTextNodes(root, function (node) {
+    node.textContent = node.textContent.replaceAll(escapedDollarPlaceholder, '$');
   });
 </script>

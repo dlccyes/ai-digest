@@ -60,6 +60,8 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 - If you use headings, start at `##`.
 - Leave a blank line after each heading.
 - Do not use `[[wikilinks]]`.
+- When writing a literal dollar amount in source Markdown, use `\\$`, not `\$`. In this Hugo setup, `\$` is reduced to `$` in rendered HTML before KaTeX runs, while `\\$` survives as `\$` and is preserved as a literal dollar sign by the site's math wrapper.
+
 
 ## Commit And Push
 
@@ -76,4 +78,5 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 - Confirm the frontmatter contains only `date`, `title`, and `tags`.
 - Confirm the first content line is the generated-by line.
 - Confirm the file is new and not a duplicate of an existing issue and article summary.
+- Confirm any literal dollar amounts in the note body use `\\$` in the Markdown source.
 - If git publish was requested, confirm the commit and push succeeded.
