@@ -1,1 +1,0 @@
-<img class="img-zoomable" src='{{ if not (strings.HasPrefix .Destination "http") }}{{ .Page.RelPermalink }}{{end}}{{ .Destination | safeURL }}' alt="{{ .Text }}" />
