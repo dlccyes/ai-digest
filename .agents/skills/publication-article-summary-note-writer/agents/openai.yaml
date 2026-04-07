@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publication Article Summary Note Writer"
+  short_description: "Write issue article summaries into content/"
+  default_prompt: "Use $publication-article-summary-note-writer to summarize one article from the latest issue PDF of a publication into this repo's content folder."
