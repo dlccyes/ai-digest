@@ -34,7 +34,7 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 
 ## Pick The Article
 
-- Start by finding the newest PDF in the source directory.
+- Start by finding the newest PDF (unless specified otherwise) in the source directory.
 - Inspect the table of contents, article headings, or section headings before choosing.
 - Search the target output directory for existing notes from the same issue and article title to avoid duplicates.
 - If the best candidate is already summarized, move to the next best unsummarized article from the same latest issue.
@@ -54,8 +54,13 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 ## Write The Summary
 
 - Write directly into the created file.
-- Keep the summary easy to consume unless the caller requests a different tone.
-- Focus on the article's main idea and why it matters.
+- Unless the caller explicitly asks otherwise, write in third person.
+- Keep the summary easy to consume, but aim at an intelligent adult reader rather than a child.
+- Explain complicated ideas in plain, precise language. Translate jargon when useful, but do not lapse into baby-talk, condescension, or "explain like I'm five" phrasing.
+- Make the piece stand on its own as a compact essay or blog post, not just a mechanical recap. Give it a clear structure with an engaging opening, a coherent middle, and a clean closing takeaway.
+- Prefer a small number of purposeful sections over a rigid checklist of mini-headings.
+- Focus on the article's main idea, the most important supporting points, and why they matter.
+- Keep the prose lean. Avoid filler, hype, generic praise, and throat-clearing.
 - Do not repeat the title as an H1 in the body.
 - If you use headings, start at `##`.
 - Leave a blank line after each heading.
