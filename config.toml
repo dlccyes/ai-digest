@@ -147,8 +147,8 @@ name = "Economics"
 url = "/economics/"
 weight = 30
 [[menu.nav]]
-name = "Travel"
-url = "/travel/"
+name = "Sports"
+url = "/Sports/"
 weight = 40
 [[menu.nav]]
 name = "Random"
