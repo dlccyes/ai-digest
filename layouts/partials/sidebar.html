@@ -30,18 +30,27 @@
 <div class="sidebar-item sidebar-pages">
   <h3>{{ i18n "sidebarPages" }}</h3>
   <ul>
+      {{ $categories := slice }}
       {{ range .Site.Menus.nav }}
       {{ $section := "" }}
-      {{ if eq .URL "/" }}
+      {{ $count := 0 }}
+      {{ if or (eq .URL $.Site.Home.RelPermalink) (eq .URL $.Site.Home.Permalink) (eq (trim .URL "/") "") }}
         {{ $section = "home" }}
+        {{ $count = len $.Site.RegularPages }}
       {{ else if hasPrefix .URL "/" }}
         {{ $candidate := trim .URL "/" }}
-        {{ if in (slice "tech" "science" "economics" "sports" "career") $candidate }}
+        {{ if gt (len $candidate) 0 }}
           {{ $section = $candidate }}
+          {{ $count = len (where $.Site.RegularPages "Section" $candidate) }}
         {{ end }}
       {{ end }}
+      {{ if or (eq $section "home") (gt $count 0) }}
+        {{ $categories = $categories | append (dict "name" .Name "url" .URL "section" $section "count" $count) }}
+      {{ end }}
+      {{ end }}
+      {{ range sort $categories "count" "desc" }}
       <li>
-          <a href="{{ .URL }}"{{ with $section }} data-section="{{ . }}"{{ end }}>└ {{ .Name }}</a>
+          <a href="{{ .url }}"{{ with .section }} data-section="{{ . }}"{{ end }}>└ {{ .name }} ({{ .count }})</a>
       </li>
       {{ end }}
   </ul>
