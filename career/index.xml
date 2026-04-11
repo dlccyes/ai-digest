@@ -2,12 +2,12 @@
 &lt;h2 id="quick-facts">Quick facts&lt;/h2>
 &lt;ul>
 &lt;li>Difficulty: &lt;code>MEDIUM&lt;/code>&lt;/li>
-&lt;li>Frequency: &lt;code>75.0&lt;/code>&lt;/li>
-&lt;li>Status: &lt;code>SOLVED&lt;/code>&lt;/li>
 &lt;li>Problem: &lt;a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">Add Two Numbers&lt;/a>&lt;/li>
 &lt;li>Main tags: &lt;code>Linked List&lt;/code>, &lt;code>Math&lt;/code>, &lt;code>Recursion&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="what-the-problem-is-really-asking">What the problem is really asking&lt;/h2>
 &lt;p>Two linked lists represent two non-negative integers. Each node stores one digit, and the digits are already in reverse order, so the ones place comes first.&lt;/p>
 &lt;p>That means &lt;code>2 -&amp;gt; 4 -&amp;gt; 3&lt;/code> stands for &lt;code>342&lt;/code>, and &lt;code>5 -&amp;gt; 6 -&amp;gt; 4&lt;/code> stands for &lt;code>465&lt;/code>.&lt;/p>
-&lt;p>The job is to return a brand-new linked list for the sum. In the example above, &lt;code>342 + 465 = 807&lt;/code>, so the answer is &lt;code>7 -&amp;gt; 0 -&amp;gt; 8&lt;/code>.&lt;/p></description></item></channel></rss>
+&lt;p>The job is to return a brand-new linked list for the sum. In the example above, &lt;code>342 + 465 = 807&lt;/code>, so the answer is &lt;code>7 -&amp;gt; 0 -&amp;gt; 8&lt;/code>.&lt;/p>
+&lt;h2 id="the-key-insight">The key insight&lt;/h2>
+&lt;p>This problem looks harder than it is because it uses linked lists instead of arrays or integers.&lt;/p></description></item></channel></rss>
