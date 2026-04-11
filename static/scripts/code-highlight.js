@@ -317,7 +317,7 @@ function renderPythonBlock(source, theme) {
   const parameterNames = collectPythonParameters(source)
   const lines = source.split('\n')
   const renderedLines = lines.map((line) => `<span class="line">${renderPythonLine(line, palette, parameterNames)}</span>`)
-  return `<pre class="shiki custom-python" style="background-color:${palette.background};color:${palette.plain}" tabindex="0"><code>${renderedLines.join('\n')}</code></pre>`
+  return `<pre class="shiki custom-python" style="background-color:${palette.background};color:${palette.plain}" tabindex="0"><code>${renderedLines.join('')}</code></pre>`
 }
 
 async function getHighlighter(langs) {
