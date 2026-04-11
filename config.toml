@@ -150,6 +150,10 @@ weight = 40
 name = "Career"
 url = "/career/"
 weight = 50
+[[menu.nav]]
+name = "News"
+url = "/news/"
+weight = 60
 
 [[menu.link]]
 name = "Personal Page"
