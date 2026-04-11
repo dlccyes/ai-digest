@@ -1,0 +1,64 @@
+// Override variables with project-local site palette.
+@import '_custom'; // Keep that for back-compatibility. This shouldn't be used anymore.
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+$font-size-0: 2em !default;
+$font-size-1: 1.75em !default;
+$font-size-2: 1.5em !default;
+$font-size-3: 1.25em !default;
+$font-size-4: 1em !default;
+
+// used primer variables
+// @primer/css/support/variables/misc.scss
+$font-weight-bold: 600;
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 400;
+$body-font: Lato, "Noto Sans TC", -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Arial', 'Helvetica Neue',
+  'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC',
+  'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif !default;
+$mono-font: ui-monospace, 'SFMono-Regular', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace !default;
+$title-font: 'Product Sans', sans-serif !default;
+$body-font-size: 18px !default;
+
+$width-md: 768px;
+
+$light-color-primary: #4f83d1 !default;
+$light-color-secondary: #3aa8b8 !default;
+$light-color-third: #6a94d0 !default;
+$light-color-focus: #24374d !default;
+$light-color-mute: #6d7f96 !default;
+$light-color-font: #1b2736 !default;
+$light-color-divider: #d6e2ef !default;
+$light-color-bg: #edf4fb !default;
+$light-color-codebg: #f6faff !default;
+$light-color-selection: #9dd7ff66 !default;
+
+$dark-color-primary: #6ee7ff !default;
+$dark-color-secondary: #38bdf8 !default;
+$dark-color-third: #93c5fd !default;
+$dark-color-focus: #f8fafc !default;
+$dark-color-mute: #94a3b8 !default;
+$dark-color-font: #dbeafe !default;
+$dark-color-divider: #1f3658 !default;
+$dark-color-bg: #07111f !default;
+$dark-color-codebg: #0b172a !default;
+$dark-color-selection: #00d1ff54 !default;
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/fonts/product_sans/product_sans_700.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/fonts/fira_code/fira_code_400.woff2')
+    format('woff2');
+}
