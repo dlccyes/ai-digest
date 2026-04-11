@@ -46,7 +46,7 @@ defaultTheme = "light"              # default theme when first visit (auto|dark|
 math = true                        # Enable LaTeX math rendering globally
 
 # Source URL of the website, will appear in the footer
-sourceURL = "https://github.com/dlccyes/blog"
+sourceURL = "https://github.com/dlccyes/ai-digest"
 
 # Use CloudFlare Workers to accelerate the Google Analytics
 # If you are using this please comment the googleAnalytics above
@@ -160,8 +160,8 @@ name = "Personal Page"
 url = "https://www.derricklin.net"
 weight = 1
 [[menu.link]]
-name = "Personal Wiki"
-url = "https://wiki.derricklin.net"
+name = "Blog"
+url = "https://blog.derricklin.net"
 weight = 2
 [[menu.link]]
 name = "GitHub"
