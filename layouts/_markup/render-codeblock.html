@@ -1,0 +1,11 @@
+{{- .Page.Store.Set "hasCodeBlocks" true -}}
+{{- $lang := .Type | default "" -}}
+{{- $attrs := .Attributes -}}
+{{- $classNames := slice "code-block-source" -}}
+{{- if $lang -}}
+  {{- $classNames = $classNames | append (printf "language-%s" $lang) -}}
+{{- end -}}
+{{- with index $attrs "class" -}}
+  {{- $classNames = $classNames | append . -}}
+{{- end -}}
+<pre tabindex="0" class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}{{ with $lang }} data-lang="{{ . }}"{{ end }}><code{{ with $lang }} class="language-{{ . }}" data-lang="{{ . }}"{{ end }}>{{ .Inner | htmlEscape | safeHTML }}</code></pre>

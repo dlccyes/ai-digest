@@ -117,8 +117,6 @@ duplicateResourceFiles = true # maintain pre-0.123.0 page bundle image behavior
 unsafe = true # Enable user to embed HTML snippets in Markdown content
 [markup.highlight]
 codeFences = true
-guessSyntax = true
-noClasses = false
 
 [markup.tableOfContents]
 startLevel = 2

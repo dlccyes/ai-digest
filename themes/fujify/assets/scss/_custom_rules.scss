@@ -75,335 +75,79 @@ a:hover {
   border-radius: 20px;
 }
 
-body[data-theme='light'],
-body[data-theme='auto'] {
-  --codeblock-bg: #ffffff;
-  --codeblock-fg: #24292e;
-  --codeblock-line-highlight: #e5e5e5;
-  --codeblock-line-number: #7f7f7f;
-  --codeblock-error-fg: #f6f8fa;
-  --codeblock-error-bg: #82071e;
-  --codeblock-keyword: #cf222e;
-  --codeblock-keyword-namespace: #cf222e;
-  --codeblock-name-attribute: #1f2328;
-  --codeblock-name-class: #1f2328;
-  --codeblock-name-constant: #0550ae;
-  --codeblock-name-decorator: #0550ae;
-  --codeblock-name-entity: #6639ba;
-  --codeblock-name-label: #8b0000;
-  --codeblock-name-namespace: #24292e;
-  --codeblock-name-other: #1f2328;
-  --codeblock-name-tag: #0550ae;
-  --codeblock-name-builtin: #6639ba;
-  --codeblock-name-builtin-pseudo: #6a737d;
-  --codeblock-name-variable: #953800;
-  --codeblock-name-function: #6639ba;
-  --codeblock-string: #0a3069;
-  --codeblock-string-symbol: #032f62;
-  --codeblock-number: #0550ae;
-  --codeblock-operator: #0550ae;
-  --codeblock-punctuation: #1f2328;
-  --codeblock-comment: #57606a;
-  --codeblock-deleted-fg: #82071e;
-  --codeblock-deleted-bg: #ffebe9;
-  --codeblock-inserted-fg: #116329;
-  --codeblock-inserted-bg: #dafbe1;
-  --codeblock-generic-output: #1f2328;
-  --codeblock-whitespace: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  body[data-theme='auto'] {
-    --codeblock-bg: #272822;
-    --codeblock-fg: #f8f8f2;
-    --codeblock-line-highlight: #3c3d38;
-    --codeblock-line-number: #7f7f7f;
-    --codeblock-error-fg: #960050;
-    --codeblock-error-bg: #1e0010;
-    --codeblock-keyword: #66d9ef;
-    --codeblock-keyword-namespace: #f92672;
-    --codeblock-name-attribute: #a6e22e;
-    --codeblock-name-class: #a6e22e;
-    --codeblock-name-constant: #66d9ef;
-    --codeblock-name-decorator: #a6e22e;
-    --codeblock-name-entity: #a6e22e;
-    --codeblock-name-label: #f8f8f2;
-    --codeblock-name-namespace: #f8f8f2;
-    --codeblock-name-other: #a6e22e;
-    --codeblock-name-tag: #f92672;
-    --codeblock-name-builtin: #66d9ef;
-    --codeblock-name-builtin-pseudo: #fd971f;
-    --codeblock-name-variable: #f8f8f2;
-    --codeblock-name-function: #a6e22e;
-    --codeblock-string: #e6db74;
-    --codeblock-string-symbol: #e6db74;
-    --codeblock-number: #ae81ff;
-    --codeblock-operator: #f92672;
-    --codeblock-punctuation: #f8f8f2;
-    --codeblock-comment: #75715e;
-    --codeblock-deleted-fg: #f92672;
-    --codeblock-deleted-bg: transparent;
-    --codeblock-inserted-fg: #a6e22e;
-    --codeblock-inserted-bg: transparent;
-    --codeblock-generic-output: #f8f8f2;
-    --codeblock-whitespace: #f8f8f2;
-  }
-}
-
-body[data-theme='dark'] {
-  --codeblock-bg: #272822;
-  --codeblock-fg: #f8f8f2;
-  --codeblock-line-highlight: #3c3d38;
-  --codeblock-line-number: #7f7f7f;
-  --codeblock-error-fg: #960050;
-  --codeblock-error-bg: #1e0010;
-  --codeblock-keyword: #66d9ef;
-  --codeblock-keyword-namespace: #f92672;
-  --codeblock-name-attribute: #a6e22e;
-  --codeblock-name-class: #a6e22e;
-  --codeblock-name-constant: #66d9ef;
-  --codeblock-name-decorator: #a6e22e;
-  --codeblock-name-entity: #a6e22e;
-  --codeblock-name-label: #f8f8f2;
-  --codeblock-name-namespace: #f8f8f2;
-  --codeblock-name-other: #a6e22e;
-  --codeblock-name-tag: #f92672;
-  --codeblock-name-builtin: #66d9ef;
-  --codeblock-name-builtin-pseudo: #fd971f;
-  --codeblock-name-variable: #f8f8f2;
-  --codeblock-name-function: #a6e22e;
-  --codeblock-string: #e6db74;
-  --codeblock-string-symbol: #e6db74;
-  --codeblock-number: #ae81ff;
-  --codeblock-operator: #f92672;
-  --codeblock-punctuation: #f8f8f2;
-  --codeblock-comment: #75715e;
-  --codeblock-deleted-fg: #f92672;
-  --codeblock-deleted-bg: transparent;
-  --codeblock-inserted-fg: #a6e22e;
-  --codeblock-inserted-bg: transparent;
-  --codeblock-generic-output: #f8f8f2;
-  --codeblock-whitespace: #f8f8f2;
-}
-
-// Hugo/Chroma themed code blocks. Dark mode uses a Monokai-style palette;
-// light mode uses a GitHub-style palette.
-.markdown-body .highlight {
-  margin-bottom: 16px;
-  background-color: var(--codeblock-bg);
-  border-radius: 20px;
+// Shiki themed code blocks. Dark mode uses Monokai and light mode uses
+// Light Plus, while the site toggle controls which token variables are active.
+.markdown-body pre.code-block-source {
+  padding: 16px;
   overflow: auto;
 }
 
-.markdown-body .highlight pre.chroma {
-  margin: 0;
+.markdown-body pre.shiki {
+  margin-bottom: 16px;
   padding: 16px;
-  background-color: var(--codeblock-bg);
-  color: var(--codeblock-fg);
+  overflow: auto;
   border-radius: 20px;
+  line-height: 1.45;
 }
 
-.markdown-body .highlight pre.chroma,
-.markdown-body .highlight pre.chroma code {
-  background-color: var(--codeblock-bg);
-  color: var(--codeblock-fg);
-  text-shadow: none;
-}
-
-.markdown-body .highlight pre.chroma code {
+.markdown-body .shiki code {
   display: block;
+  background-color: transparent;
 }
 
-.markdown-body .chroma .lnlinks {
-  outline: none;
-  text-decoration: none;
-  color: inherit;
+.markdown-body .shiki .line {
+  display: block;
+  min-height: 1.45em;
 }
 
-.markdown-body .chroma .lntd {
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  border: 0;
+body[data-theme='light'] .markdown-body .shiki,
+body[data-theme='light'] .markdown-body .shiki span,
+body[data-theme='auto'] .markdown-body .shiki,
+body[data-theme='auto'] .markdown-body .shiki span {
+  color: var(--shiki-light) !important;
+  font-style: var(--shiki-light-font-style) !important;
+  font-weight: var(--shiki-light-font-weight) !important;
+  text-decoration: var(--shiki-light-text-decoration) !important;
 }
 
-.markdown-body .chroma .lntable {
-  border-spacing: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
+body[data-theme='light'] .markdown-body .shiki,
+body[data-theme='auto'] .markdown-body .shiki {
+  background-color: var(--color-markdown-code-bg) !important;
 }
 
-.markdown-body .chroma .hl {
-  background-color: var(--codeblock-line-highlight);
+body[data-theme='light'] .markdown-body .shiki span,
+body[data-theme='auto'] .markdown-body .shiki span {
+  background-color: transparent !important;
 }
 
-.markdown-body .chroma .lnt,
-.markdown-body .chroma .ln {
-  white-space: pre;
-  user-select: none;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  color: var(--codeblock-line-number);
+@media (prefers-color-scheme: dark) {
+  body[data-theme='auto'] .markdown-body .shiki,
+  body[data-theme='auto'] .markdown-body .shiki span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+
+  body[data-theme='auto'] .markdown-body .shiki {
+    background-color: var(--shiki-dark-bg) !important;
+  }
 }
 
-.markdown-body .chroma .line {
-  display: flex;
+body[data-theme='dark'] .markdown-body .shiki,
+body[data-theme='dark'] .markdown-body .shiki span {
+  color: var(--shiki-dark) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
-.markdown-body .chroma .err {
-  color: var(--codeblock-error-fg);
-  background-color: var(--codeblock-error-bg);
+body[data-theme='dark'] .markdown-body .shiki {
+  background-color: var(--shiki-dark-bg) !important;
 }
 
-.markdown-body .chroma .k,
-.markdown-body .chroma .kc,
-.markdown-body .chroma .kd,
-.markdown-body .chroma .kp,
-.markdown-body .chroma .kr,
-.markdown-body .chroma .kt {
-  color: var(--codeblock-keyword);
-}
-
-.markdown-body .chroma .kn {
-  color: var(--codeblock-keyword-namespace);
-}
-
-.markdown-body .chroma .na {
-  color: var(--codeblock-name-attribute);
-}
-
-.markdown-body .chroma .nc {
-  color: var(--codeblock-name-class);
-}
-
-.markdown-body .chroma .no {
-  color: var(--codeblock-name-constant);
-}
-
-.markdown-body .chroma .nd,
-.markdown-body .chroma .ne,
-.markdown-body .chroma .nx {
-  color: var(--codeblock-name-decorator);
-}
-
-.markdown-body .chroma .ni {
-  color: var(--codeblock-name-entity);
-}
-
-.markdown-body .chroma .nl {
-  color: var(--codeblock-name-label);
-  font-weight: 600;
-}
-
-.markdown-body .chroma .nn {
-  color: var(--codeblock-name-namespace);
-}
-
-.markdown-body .chroma .nt {
-  color: var(--codeblock-name-tag);
-}
-
-.markdown-body .chroma .nb {
-  color: var(--codeblock-name-builtin);
-}
-
-.markdown-body .chroma .bp {
-  color: var(--codeblock-name-builtin-pseudo);
-}
-
-.markdown-body .chroma .nv,
-.markdown-body .chroma .vc,
-.markdown-body .chroma .vg,
-.markdown-body .chroma .vi,
-.markdown-body .chroma .vm {
-  color: var(--codeblock-name-variable);
-}
-
-.markdown-body .chroma .nf,
-.markdown-body .chroma .fm {
-  color: var(--codeblock-name-function);
-}
-
-.markdown-body .chroma .l,
-.markdown-body .chroma .m,
-.markdown-body .chroma .mb,
-.markdown-body .chroma .mf,
-.markdown-body .chroma .mh,
-.markdown-body .chroma .mi,
-.markdown-body .chroma .il,
-.markdown-body .chroma .mo {
-  color: var(--codeblock-number);
-}
-
-.markdown-body .chroma .ld,
-.markdown-body .chroma .s,
-.markdown-body .chroma .sa,
-.markdown-body .chroma .sb,
-.markdown-body .chroma .sc,
-.markdown-body .chroma .dl,
-.markdown-body .chroma .sd,
-.markdown-body .chroma .s2,
-.markdown-body .chroma .sh,
-.markdown-body .chroma .si,
-.markdown-body .chroma .sx,
-.markdown-body .chroma .sr,
-.markdown-body .chroma .s1 {
-  color: var(--codeblock-string);
-}
-
-.markdown-body .chroma .se,
-.markdown-body .chroma .ss {
-  color: var(--codeblock-string-symbol);
-}
-
-.markdown-body .chroma .o,
-.markdown-body .chroma .ow {
-  color: var(--codeblock-operator);
-}
-
-.markdown-body .chroma .p {
-  color: var(--codeblock-punctuation);
-}
-
-.markdown-body .chroma .c,
-.markdown-body .chroma .ch,
-.markdown-body .chroma .cm,
-.markdown-body .chroma .c1,
-.markdown-body .chroma .cs,
-.markdown-body .chroma .cp,
-.markdown-body .chroma .cpf {
-  color: var(--codeblock-comment);
-}
-
-.markdown-body .chroma .gd {
-  color: var(--codeblock-deleted-fg);
-  background-color: var(--codeblock-deleted-bg);
-}
-
-.markdown-body .chroma .ge {
-  font-style: italic;
-}
-
-.markdown-body .chroma .gi {
-  color: var(--codeblock-inserted-fg);
-  background-color: var(--codeblock-inserted-bg);
-}
-
-.markdown-body .chroma .gl {
-  text-decoration: underline;
-}
-
-.markdown-body .chroma .go {
-  color: var(--codeblock-generic-output);
-}
-
-.markdown-body .chroma .gs {
-  font-weight: 700;
-}
-
-.markdown-body .chroma .w {
-  color: var(--codeblock-whitespace);
+body[data-theme='dark'] .markdown-body .shiki span {
+  background-color: transparent !important;
 }
 
 // .countryclub::before {
