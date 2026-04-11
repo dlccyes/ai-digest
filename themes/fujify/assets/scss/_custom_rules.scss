@@ -75,6 +75,83 @@ a:hover {
   border-radius: 20px;
 }
 
+:root {
+  --monokai-bg: #272822;
+  --monokai-fg: #f8f8f2;
+  --monokai-comment: #75715e;
+  --monokai-red: #f92672;
+  --monokai-orange: #fd971f;
+  --monokai-yellow: #e6db74;
+  --monokai-green: #a6e22e;
+  --monokai-blue: #66d9ef;
+  --monokai-purple: #ae81ff;
+}
+
+// Prism.js monokai override for fenced code blocks.
+.markdown-body pre,
+.markdown-body pre[class*='language-'] {
+  background-color: var(--monokai-bg);
+  color: var(--monokai-fg);
+}
+
+.markdown-body pre > code[class*='language-'],
+code[class*='language-'] {
+  color: var(--monokai-fg);
+}
+
+body[data-theme] .token.comment,
+body[data-theme] .token.prolog,
+body[data-theme] .token.doctype,
+body[data-theme] .token.cdata {
+  color: var(--monokai-comment);
+}
+
+body[data-theme] .token.punctuation,
+body[data-theme] .token.operator,
+body[data-theme] .token.entity,
+body[data-theme] .token.url,
+body[data-theme] .token.variable {
+  color: var(--monokai-fg);
+}
+
+body[data-theme] .token.property,
+body[data-theme] .token.tag,
+body[data-theme] .token.constant,
+body[data-theme] .token.symbol,
+body[data-theme] .token.deleted {
+  color: var(--monokai-red);
+}
+
+body[data-theme] .token.boolean,
+body[data-theme] .token.number {
+  color: var(--monokai-purple);
+}
+
+body[data-theme] .token.selector,
+body[data-theme] .token.attr-name,
+body[data-theme] .token.string,
+body[data-theme] .token.char,
+body[data-theme] .token.builtin,
+body[data-theme] .token.inserted {
+  color: var(--monokai-green);
+}
+
+body[data-theme] .token.atrule,
+body[data-theme] .token.attr-value,
+body[data-theme] .token.function,
+body[data-theme] .token.class-name {
+  color: var(--monokai-yellow);
+}
+
+body[data-theme] .token.keyword {
+  color: var(--monokai-blue);
+}
+
+body[data-theme] .token.regex,
+body[data-theme] .token.important {
+  color: var(--monokai-orange);
+}
+
 // .countryclub::before {
 //   // content: "You're not welcomed, go away";
 //   content: attr(marsey-text);
