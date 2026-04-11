@@ -144,12 +144,16 @@ url = "/economics/"
 weight = 30
 [[menu.nav]]
 name = "Sports"
-url = "/Sports/"
+url = "/sports/"
 weight = 40
+[[menu.nav]]
+name = "Career"
+url = "/career/"
+weight = 50
 [[menu.nav]]
 name = "Random"
 url = "/random/"
-weight = 50
+weight = 100
 
 [[menu.link]]
 name = "Personal Page"
