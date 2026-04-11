@@ -31,8 +31,17 @@
   <h3>{{ i18n "sidebarPages" }}</h3>
   <ul>
       {{ range .Site.Menus.nav }}
+      {{ $section := "" }}
+      {{ if eq .URL "/" }}
+        {{ $section = "home" }}
+      {{ else if hasPrefix .URL "/" }}
+        {{ $candidate := trim .URL "/" }}
+        {{ if in (slice "tech" "science" "economics" "sports" "career") $candidate }}
+          {{ $section = $candidate }}
+        {{ end }}
+      {{ end }}
       <li>
-          <a href="{{ .URL }}">└ {{ .Name }}</a>
+          <a href="{{ .URL }}"{{ with $section }} data-section="{{ . }}"{{ end }}>└ {{ .Name }}</a>
       </li>
       {{ end }}
   </ul>

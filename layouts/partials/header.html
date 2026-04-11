@@ -1,0 +1,14 @@
+<header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            {{ $headerTitle := .Site.Title }}
+            {{ if .IsSection }}
+                {{ $headerTitle = printf "%s - %s" .Site.Title (.Section | humanize | title) }}
+            {{ end }}
+            <a class="title-main" href="{{ .Site.BaseURL }}">{{ $headerTitle }}</a>
+            {{ with .Site.Params.subTitle }}
+            <span class="title-sub">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+</header>

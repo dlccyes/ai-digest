@@ -1,0 +1,190 @@
+@mixin section-accent-palette(
+  $section,
+  $light-primary,
+  $light-secondary,
+  $light-third,
+  $light-focus,
+  $light-selection,
+  $dark-primary,
+  $dark-secondary,
+  $dark-third,
+  $dark-focus,
+  $dark-selection
+) {
+  body[data-theme='light'][data-section='#{$section}'],
+  body[data-theme='auto'][data-section='#{$section}'],
+  body[data-theme='light'] .post[data-section='#{$section}'],
+  body[data-theme='auto'] .post[data-section='#{$section}'] {
+    --color-primary: #{$light-primary};
+    --color-secondary: #{$light-secondary};
+    --color-third: #{$light-third};
+    --color-focus: #{$light-focus};
+    --color-selection: #{$light-selection};
+    --color-text-link: #{$light-primary};
+    --color-text-danger: #{$light-primary};
+  }
+
+  body[data-theme='dark'][data-section='#{$section}'],
+  body[data-theme='dark'] .post[data-section='#{$section}'] {
+    --color-primary: #{$dark-primary};
+    --color-secondary: #{$dark-secondary};
+    --color-third: #{$dark-third};
+    --color-focus: #{$dark-focus};
+    --color-selection: #{$dark-selection};
+    --color-text-link: #{$dark-primary};
+    --color-text-danger: #{$dark-primary};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body[data-theme='auto'][data-section='#{$section}'],
+    body[data-theme='auto'] .post[data-section='#{$section}'] {
+      --color-primary: #{$dark-primary};
+      --color-secondary: #{$dark-secondary};
+      --color-third: #{$dark-third};
+      --color-focus: #{$dark-focus};
+      --color-selection: #{$dark-selection};
+      --color-text-link: #{$dark-primary};
+      --color-text-danger: #{$dark-primary};
+    }
+  }
+}
+
+@mixin sidebar-section-link(
+  $section,
+  $light-color,
+  $light-hover,
+  $dark-color,
+  $dark-hover
+) {
+  body[data-theme='light'] .sidebar-pages a[data-section='#{$section}'],
+  body[data-theme='auto'] .sidebar-pages a[data-section='#{$section}'] {
+    color: #{$light-color};
+  }
+
+  body[data-theme='light'] .sidebar-pages a[data-section='#{$section}']:hover,
+  body[data-theme='auto'] .sidebar-pages a[data-section='#{$section}']:hover {
+    color: #{$light-hover};
+  }
+
+  body[data-theme='dark'] .sidebar-pages a[data-section='#{$section}'] {
+    color: #{$dark-color};
+  }
+
+  body[data-theme='dark'] .sidebar-pages a[data-section='#{$section}']:hover {
+    color: #{$dark-hover};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body[data-theme='auto'] .sidebar-pages a[data-section='#{$section}'] {
+      color: #{$dark-color};
+    }
+
+    body[data-theme='auto'] .sidebar-pages a[data-section='#{$section}']:hover {
+      color: #{$dark-hover};
+    }
+  }
+}
+
+@include sidebar-section-link(
+  'home',
+  #4f83d1,
+  #3aa8b8,
+  #6ee7ff,
+  #38bdf8
+);
+
+@include sidebar-section-link(
+  'tech',
+  #4f83d1,
+  #3aa8b8,
+  #6ee7ff,
+  #38bdf8
+);
+
+@include section-accent-palette(
+  'science',
+  #2f8f6b,
+  #52ad84,
+  #3f9e78,
+  #1f5f49,
+  rgba(125, 214, 179, 0.45),
+  #6fe0b1,
+  #39c88c,
+  #8ce9c2,
+  #e6fff3,
+  rgba(57, 200, 140, 0.34)
+);
+
+@include sidebar-section-link(
+  'science',
+  #2f8f6b,
+  #52ad84,
+  #6fe0b1,
+  #39c88c
+);
+
+@include section-accent-palette(
+  'economics',
+  #d81e1f,
+  #ef4d43,
+  #c93331,
+  #7b1517,
+  rgba(216, 30, 31, 0.34),
+  #ff7b72,
+  #ff5a52,
+  #ffaaa3,
+  #ffe6e3,
+  rgba(255, 90, 82, 0.34)
+);
+
+@include sidebar-section-link(
+  'economics',
+  #d81e1f,
+  #ef4d43,
+  #ff7b72,
+  #ff5a52
+);
+
+@include section-accent-palette(
+  'sports',
+  #cc673c,
+  #e38338,
+  #c45542,
+  #7a3421,
+  rgba(255, 167, 116, 0.42),
+  #ffa36b,
+  #ff7a50,
+  #ffc29f,
+  #ffe7d9,
+  rgba(255, 122, 80, 0.34)
+);
+
+@include sidebar-section-link(
+  'sports',
+  #cc673c,
+  #e38338,
+  #ffa36b,
+  #ff7a50
+);
+
+@include section-accent-palette(
+  'career',
+  #2f5fb8,
+  #4a76d1,
+  #5a86d9,
+  #17356f,
+  rgba(123, 162, 244, 0.42),
+  #7ea9ff,
+  #5f8fff,
+  #aac5ff,
+  #edf4ff,
+  rgba(95, 143, 255, 0.34)
+);
+
+@include sidebar-section-link(
+  'career',
+  #2f5fb8,
+  #4a76d1,
+  #7ea9ff,
+  #5f8fff
+);

@@ -126,10 +126,10 @@ endLevel = 3
 tag = "tags"
 
 [menu]
-[[menu.nav]]
-name = "Home"
-url = "/"
-weight = 2
+# [[menu.nav]]
+# name = "Home"
+# url = "/"
+# weight = 2
 [[menu.nav]]
 name = "Tech"
 url = "/tech/"
@@ -150,10 +150,6 @@ weight = 40
 name = "Career"
 url = "/career/"
 weight = 50
-[[menu.nav]]
-name = "Random"
-url = "/random/"
-weight = 100
 
 [[menu.link]]
 name = "Personal Page"
