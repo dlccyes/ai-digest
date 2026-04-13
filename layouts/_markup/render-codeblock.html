@@ -8,4 +8,12 @@
 {{- with index $attrs "class" -}}
   {{- $classNames = $classNames | append . -}}
 {{- end -}}
-<pre tabindex="0" class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}{{ with $lang }} data-lang="{{ . }}"{{ end }}><code{{ with $lang }} class="language-{{ . }}" data-lang="{{ . }}"{{ end }}>{{ .Inner | htmlEscape | safeHTML }}</code></pre>
+<div class="code-block">
+  <button
+    class="code-block-copy"
+    type="button"
+    data-copy-label="Copy"
+    data-copied-label="Copied"
+    aria-label="Copy code to clipboard">Copy</button>
+  <pre tabindex="0" class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}{{ with $lang }} data-lang="{{ . }}"{{ end }}><code{{ with $lang }} class="language-{{ . }}" data-lang="{{ . }}"{{ end }}>{{ .Inner | htmlEscape | safeHTML }}</code></pre>
+</div>

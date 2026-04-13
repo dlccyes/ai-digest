@@ -1,10 +1,13 @@
 import { bundledLanguages, createHighlighter } from 'https://esm.sh/shiki@4.0.2'
 
 const BLOCK_SELECTOR = 'pre.code-block-source, pre.shiki[data-code-source]'
+const COPY_BUTTON_SELECTOR = '.code-block-copy'
 const LIGHT_THEME = 'light-plus'
 const DARK_THEME = 'monokai'
 const THEME_MEDIA = window.matchMedia('(prefers-color-scheme: dark)')
 const PYTHON_LANGS = new Set(['python', 'py'])
+const COPY_RESET_DELAY = 2000
+const copyResetTimers = new WeakMap()
 
 const PYTHON_PALETTES = {
   dark: {
@@ -161,6 +164,101 @@ function getResolvedTheme() {
   }
   return THEME_MEDIA.matches ? 'dark' : 'light'
 }
+
+function getCopyButtonLabel(button, attribute, fallback) {
+  return button.getAttribute(attribute) || fallback
+}
+
+function resetCopyButton(button) {
+  button.textContent = getCopyButtonLabel(button, 'data-copy-label', 'Copy')
+  button.classList.remove('is-copied', 'is-copy-error')
+}
+
+function showCopyButtonState(button, label, className) {
+  button.textContent = label
+  button.classList.remove('is-copied', 'is-copy-error')
+  if (className) {
+    button.classList.add(className)
+  }
+
+  const existingTimer = copyResetTimers.get(button)
+  if (existingTimer) {
+    window.clearTimeout(existingTimer)
+  }
+
+  const resetTimer = window.setTimeout(() => {
+    resetCopyButton(button)
+    copyResetTimers.delete(button)
+  }, COPY_RESET_DELAY)
+
+  copyResetTimers.set(button, resetTimer)
+}
+
+function readCodeBlockSource(button) {
+  const container = button.closest('.code-block')
+  const pre = container?.querySelector('pre')
+  const code = pre?.querySelector('code')
+  return pre?.dataset.codeSource || code?.textContent || pre?.textContent || ''
+}
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement('textarea')
+  textArea.value = text
+  textArea.setAttribute('readonly', '')
+  textArea.setAttribute('aria-hidden', 'true')
+  textArea.style.position = 'fixed'
+  textArea.style.top = '0'
+  textArea.style.left = '0'
+  textArea.style.opacity = '0'
+
+  document.body.append(textArea)
+  textArea.select()
+  textArea.setSelectionRange(0, text.length)
+
+  let copied = false
+  try {
+    copied = document.execCommand('copy')
+  } catch (error) {
+    console.error('Code copy fallback failed', error)
+  }
+
+  textArea.remove()
+  return copied
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text)
+      return true
+    } catch (error) {
+      console.error('Clipboard API copy failed', error)
+    }
+  }
+
+  return fallbackCopyText(text)
+}
+
+document.addEventListener('click', (event) => {
+  const button = event.target.closest(COPY_BUTTON_SELECTOR)
+  if (!button) {
+    return
+  }
+
+  const source = readCodeBlockSource(button)
+  if (!source) {
+    return
+  }
+
+  void copyText(source).then((copied) => {
+    if (copied) {
+      showCopyButtonState(button, getCopyButtonLabel(button, 'data-copied-label', 'Copied'), 'is-copied')
+      return
+    }
+
+    showCopyButtonState(button, 'Copy failed', 'is-copy-error')
+  })
+})
 
 function escapeHtml(value) {
   return value
