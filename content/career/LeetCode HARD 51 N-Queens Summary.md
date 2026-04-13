@@ -72,13 +72,6 @@ This note uses the clearer set-based version for the final code and explains the
 
 For this problem, exponential search is unavoidable because the algorithm may need to enumerate many full solutions. The goal is to make each partial-state check as cheap as possible and cut dead branches early.
 
-## Interview follow-ups
-
-- How would you count the number of solutions instead of returning every board? Use the exact same row-by-row backtracking, but increment an integer counter when a full placement is found instead of building strings. This works because the legality test and the search tree are unchanged; only the output handling changes. The worst-case search time is still exponential, but memory use and constant factors improve because no board strings are materialized.
-- How would you optimize this for larger `n`? Replace the sets with bitmasks for occupied columns and diagonals. The search logic stays the same, but availability checks and updates become integer operations, which are faster and more compact. The asymptotic complexity does not change, but the constant factors usually get noticeably better, especially in Python.
-- What if the interviewer asks for only one valid board, not all of them? Keep the same backtracking structure, but return as soon as the first complete placement is found. This works because depth-first search eventually reaches a valid leaf if one exists. In the best case it finishes much earlier, while the worst case remains exponential if the first solution appears late or no solution exists.
-- What if some queens are pre-placed or some cells are blocked? Validate the fixed queens first, treat blocked cells as unavailable during the row search, and continue backtracking on the remaining rows. The reason this still works is that the core invariant has not changed: each row placement must respect column and diagonal constraints. The worst-case complexity is still exponential, but additional constraints often prune the tree faster.
-
 ## Python solution
 
 ```python
@@ -161,3 +154,29 @@ class Solution:
         solver = NQueensSolver(board_size=n)
         return solver.solve()
 ```
+
+## Interview follow-ups
+
+### How would you count the number of solutions instead of returning every board?
+
+Use the exact same row-by-row backtracking, but replace the output list with an integer counter. Each time the recursion reaches row `n`, increment the counter and return. That works because the real hard part of the problem is searching only legal placements; whether the algorithm stores boards or just counts them is a separate concern.
+
+The benefit is lower memory use and less string-building overhead. The time complexity is still exponential because the search tree is essentially the same, but the constant factors improve because completed boards do not need to be materialized.
+
+### How would you optimize this for larger `n`?
+
+The usual next step is to replace the three sets with bitmasks for columns, descending diagonals, and ascending diagonals. The recursive structure does not change. The improvement comes from representing used positions with integer bits, so checking availability and marking or unmarking a placement becomes a few bit operations instead of several hash set lookups.
+
+This works because the same three constraints still define legal positions. The asymptotic complexity does not fundamentally change, since the algorithm still explores combinations of placements, but bitmasks usually make the implementation noticeably faster and more space-efficient in practice.
+
+### What if the interviewer asks for only one valid board, not all of them?
+
+Keep the same depth-first search, but stop as soon as the first full placement is found. In code, that usually means returning a boolean from the recursive helper to signal that the search can short-circuit upward once a solution exists.
+
+This works because every recursive path already represents a legal partial board. As soon as one path reaches row `n`, the requirement is satisfied. In the best case, this can finish much earlier than enumerating every board. In the worst case, it is still exponential if the first valid solution appears late or if no valid solution exists.
+
+### What if some queens are pre-placed or some cells are blocked?
+
+Start by validating the fixed queens against each other and inserting their columns and diagonals into the same tracking structures used by the normal solution. Then, when processing each row, skip blocked cells and skip rows that already contain a fixed queen. The rest of the search remains unchanged.
+
+This works because the core invariant is still the same: each row must end up with a legal queen placement that does not conflict with previously committed choices. The search can even become faster in practice because pre-placed queens and blocked cells reduce the number of candidate positions, although the worst-case complexity remains exponential.
