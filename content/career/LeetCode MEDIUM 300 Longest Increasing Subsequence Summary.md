@@ -115,22 +115,6 @@ The implementation below uses the optimal `tails` approach.
 
 This works because replacing a tail with a smaller value never hurts future extensions and can only help.
 
-## Interview follow-ups
-
-### Can you return the actual subsequence, not just its length?
-
-Yes. The usual answer is to keep parent pointers and the index of the best tail for each subsequence length. When a number extends or replaces a tail, record which earlier index it should point back to. After the scan finishes, walk backward from the last index of the longest subsequence and reverse the collected values. This works because the binary-search solution still identifies a valid predecessor chain if those indices are tracked carefully. The tradeoff is implementation complexity: the length-only solution is short and clean, while reconstruction requires extra arrays and more careful bookkeeping.
-
-### What changes if the problem asks for a non-decreasing subsequence instead of a strictly increasing one?
-
-The high-level idea stays the same, but the binary-search condition changes. For a strictly increasing subsequence, a value replaces the first tail that is greater than or equal to it, which is why `bisect_left` is the right tool. For a non-decreasing subsequence, equal values are allowed to extend the sequence, so the replacement should happen at the first tail that is strictly greater than the current value, which corresponds to `bisect_right`. The complexity stays `O(n log n)`, but the comparison rule must match the exact wording of the problem.
-
-### How would you count how many longest increasing subsequences there are?
-
-The tails trick is excellent for the length, but it does not preserve enough information to count all optimal subsequences. The standard answer is a dynamic programming approach where each index keeps both the best length ending there and the number of ways to achieve that length. When `nums[j] < nums[i]`, updating `i` depends on whether extending `j` creates a longer subsequence than previously known or ties the current best. This works because counting depends on combining many predecessor paths, not just keeping the smallest tail per length. The typical solution takes `O(n^2)` time and `O(n)` space, which is acceptable for the counting variant even though it is slower than the original length-only problem.
-
-## Production-ready Python code
-
 ```python
 from bisect import bisect_left
 from typing import List
@@ -171,3 +155,17 @@ class Solution:
         """LeetCode entry point."""
         return length_of_longest_increasing_subsequence(nums)
 ```
+
+## Interview follow-ups
+
+### Can you return the actual subsequence, not just its length?
+
+Yes. The usual answer is to keep parent pointers and the index of the best tail for each subsequence length. When a number extends or replaces a tail, record which earlier index it should point back to. After the scan finishes, walk backward from the last index of the longest subsequence and reverse the collected values. This works because the binary-search solution still identifies a valid predecessor chain if those indices are tracked carefully. The tradeoff is implementation complexity: the length-only solution is short and clean, while reconstruction requires extra arrays and more careful bookkeeping.
+
+### What changes if the problem asks for a non-decreasing subsequence instead of a strictly increasing one?
+
+The high-level idea stays the same, but the binary-search condition changes. For a strictly increasing subsequence, a value replaces the first tail that is greater than or equal to it, which is why `bisect_left` is the right tool. For a non-decreasing subsequence, equal values are allowed to extend the sequence, so the replacement should happen at the first tail that is strictly greater than the current value, which corresponds to `bisect_right`. The complexity stays `O(n log n)`, but the comparison rule must match the exact wording of the problem.
+
+### How would you count how many longest increasing subsequences there are?
+
+The tails trick is excellent for the length, but it does not preserve enough information to count all optimal subsequences. The standard answer is a dynamic programming approach where each index keeps both the best length ending there and the number of ways to achieve that length. When `nums[j] < nums[i]`, updating `i` depends on whether extending `j` creates a longer subsequence than previously known or ties the current best. This works because counting depends on combining many predecessor paths, not just keeping the smallest tail per length. The typical solution takes `O(n^2)` time and `O(n)` space, which is acceptable for the counting variant even though it is slower than the original length-only problem.
