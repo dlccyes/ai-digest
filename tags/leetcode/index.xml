@@ -4,7 +4,6 @@
 &lt;li&gt;Difficulty: &lt;code&gt;MEDIUM&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Problem: &lt;a href="https://leetcode.com/problems/number-of-islands/" target="_blank"&gt;Number of Islands&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Main tags: &lt;code&gt;Array&lt;/code&gt;, &lt;code&gt;Depth-First Search&lt;/code&gt;, &lt;code&gt;Breadth-First Search&lt;/code&gt;, &lt;code&gt;Union-Find&lt;/code&gt;, &lt;code&gt;Matrix&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Frequency in source list: &lt;code&gt;56.0&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="what-the-problem-is-really-asking"&gt;What the problem is really asking&lt;/h2&gt;
 &lt;p&gt;The grid is a map of water and land:&lt;/p&gt;
