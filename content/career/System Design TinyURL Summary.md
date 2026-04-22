@@ -208,35 +208,29 @@ Prefer:
 
 ## Modern considerations
 
-### Evergreen principles from the books
-
-- Interview flow still starts with requirements, APIs, capacity, and data model before drawing boxes.
-- The core mapping is still a tiny record with a point-read access pattern.
-- DDIA's guidance on replication, partitioning, skew, and derived data is still the right mental model.
-- Hot keys are still real. Sharding alone does not eliminate them.
-
-### Modernized assumptions and patterns
-
 - Put an edge/CDN layer in front of redirects by default. Modern CDN platforms make it straightforward to cache GET responses and tune edge behavior with cache rules and cache-control semantics. This changes the practical bottleneck: for viral links, the first scaling lever is often edge cache hit rate, not database node count. Source example: [Cloudflare Cache docs](https://developers.cloudflare.com/cache/) and [default cache behavior](https://developers.cloudflare.com/cache/concepts/default-cache-behavior/).
 - Use current HTTP redirect semantics, not just the older 301-vs-302 simplification. [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) clarifies when `307` and `308` are the method-preserving options. For a browser-centric URL shortener, `301`/`302` still remain the simplest interview answer, but `307`/`308` are worth mentioning if clients send non-GET methods.
 - If the platform needs globally generated internal IDs, a time-ordered UUID can be reasonable today because [RFC 9562](https://www.rfc-editor.org/rfc/rfc9562) standardized UUIDv7 in May 2024. That said, UUIDv7 is usually better as an internal identifier than as the public short code because 128-bit values are too long for a compact alias.
 - Current managed datastores still document hot-partition limits and recommend high-cardinality keys or write sharding. That is a modern operational confirmation of DDIA's older hot-spot discussion, not a vendor-specific architectural requirement. Example: [AWS DynamoDB partition key guidance](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-design.html).
-
-### What I would say explicitly in an interview
-
-- The books' core architecture is evergreen.
-- Their example traffic numbers are dated and should be treated as illustrative only.
-- The modern update is not a radically different data model; it is heavier use of edge caching, better operational awareness of hot keys, and cleaner separation between synchronous redirects and asynchronous analytics.
+- The main practical update since the books is execution style rather than the core data model: modern platforms lean harder on edge caching, operational hot-key mitigation, and cleaner separation between synchronous redirects and asynchronous analytics.
+- The books' example traffic numbers should still be treated as illustrative assumptions, not current facts. The better answer in an interview is to state explicit assumptions and reason from them.
 
 ## Interview follow-ups
 
 - How would the design change if short links must be private and require auth checks before redirect?
+  - Add an auth check or signed-access token before resolving the destination, stop caching personalized redirects at the public edge, and treat the redirect path more like a protected read API than a public static lookup.
 - How would you support custom domains per customer?
+  - Store domain ownership and certificate state separately from the short-code mapping, route `host + short_code` to the lookup service, and keep per-domain TLS, DNS, and abuse controls in the control plane rather than mixing them into the hot lookup row.
 - Would you choose `301`, `302`, `307`, or `308` for different product tiers?
+  - Use `302` by default when analytics, link editing, or policy checks still matter. Use `301` or `308` only for effectively permanent mappings where cacheability is the goal, and mention `307` or `308` when method preservation matters for non-GET clients.
 - How would you deduplicate repeated clicks from bots without losing useful analytics?
+  - Keep the raw click log append-only, then apply bot filtering and session-level deduplication in downstream analytics jobs so the redirect path stays simple and the product can still recompute metrics with better heuristics later.
 - How would you migrate from one primary store to another without breaking existing short codes?
+  - Dual-write new mappings during migration, backfill historical rows, shadow-read the new store until parity is acceptable, and only then cut over the read path behind a feature flag. Because the short code is the stable public key, the migration should preserve identifiers and change only the backing store.
 - What changes if the system must support link editing after creation?
+  - Favor temporary redirects by default, invalidate caches aggressively on edit, and make the mapping row versioned so readers can reason about freshness. Editable destinations push the design away from aggressively permanent client-side caching.
 - How would you design abuse prevention and takedown workflows?
+  - Add rate limits, URL reputation checks, malware and phishing scans, and an admin moderation path that can disable or quarantine mappings quickly. Keep takedown state in the serving path so abusive links can be blocked immediately even if analytics or back-office systems lag.
 
 Closing view:
 

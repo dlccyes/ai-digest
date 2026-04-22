@@ -273,38 +273,29 @@ Decision events belong in a stream or log so that aggregates, alerts, and experi
 
 ## Modern considerations
 
-### Evergreen principles from the books
-
-- Start with requirements, then choose the algorithm. Do not start with a vendor product.
-- Keep the admission decision close to memory and avoid heavyweight database work on the hot path.
-- Shard mutable state by request identity, not by time alone.
-- Treat analytics as derived data, not part of the synchronous enforcement path.
-- Be explicit about the tradeoff between strictness, latency, and availability in distributed enforcement.
-
-### Modernized assumptions and patterns
-
 - Gateway and proxy enforcement is now the default mental model, not an edge case. Current Envoy docs explicitly support using local and global rate limiting together, with the local token bucket absorbing bursts before a finer-grained shared limit is checked. Sources: [Envoy local rate limiting overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/local_rate_limiting) and [Envoy global rate limiting overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting.html).
 - Returning `429 Too Many Requests` is still the standard client-facing answer. [RFC 6585](https://www.rfc-editor.org/rfc/rfc6585) also notes that under real attack load, generating a `429` for every request is not always required; dropping work can be more appropriate.
 - Modern gateways often support dry-run or shadow rollout. Current Envoy HTTP local rate-limit docs separate `filter_enabled` from `filter_enforced`, which is exactly the kind of safe rollout knob worth mentioning in an interview. Source: [Envoy HTTP local rate limit filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter).
 - Response metadata is less ad hoc than it used to be, but not fully uniform across providers. Cloudflare's current API docs document `Ratelimit`, `Ratelimit-Policy`, and `retry-after` headers on their REST APIs. Source: [Cloudflare API rate limits](https://developers.cloudflare.com/fundamentals/api/reference/limits/).
 - Older book examples sometimes attach dated traffic numbers or specific vendor counts to the design. Those examples are useful for intuition, but the better modern interview answer is to state explicit assumptions and reason from them instead of repeating old numbers as facts.
-
-### What I would say explicitly in an interview
-
-- The books' algorithm discussion is still evergreen.
-- The main modern update is where enforcement happens: more at gateways, service meshes, and edges.
-- A two-stage design is usually more practical than one giant centralized limiter:
-  - local token bucket for burst absorption
-  - distributed shared quota for cross-node fairness
-- Perfect global accuracy is possible, but it costs latency and availability. Most products choose bounded inaccuracy instead.
+- The main practical update since the books is deployment style: more enforcement now happens at gateways, proxies, and edges, so a two-stage design with local burst absorption plus distributed shared quotas is usually more realistic than one giant centralized limiter.
+- Perfect global accuracy is still possible, but it remains expensive in latency and availability terms. The modern default is usually bounded inaccuracy with clearly stated limits rather than pretending worldwide exactness is free.
 
 ## Interview follow-ups
 
 - How would the design change for login abuse protection versus a paid public API?
+  - For login, fail closed more often, combine per-IP and per-account limits, use tighter windows, and favor abuse resistance over perfect user experience. For a paid API, favor clearer quota contracts, better client feedback, and more fail-open behavior during limiter incidents.
 - Would you use token bucket, sliding window counter, or both for a `100 req/min` product contract?
+  - Use both when possible. A token bucket handles short bursts well, while a sliding window counter keeps the effective minute-level contract smoother and less gameable at window edges.
 - How would you implement a true global tenant quota across three regions?
+  - Use a global allocator that hands out regional token leases, or route all quota decisions through one strongly consistent home region if strictness matters more than latency. In most interview settings, regional leases are the better default because they bound overshoot without forcing every request through consensus.
 - How would you expose remaining quota to clients without making the numbers misleading under eventual consistency?
+  - Return approximate remaining quota with a reset hint, and make the documentation explicit that globally aggregated numbers may lag slightly. For strict customer billing views, compute usage from the durable event stream rather than the hot-path counters alone.
 - What should happen if Redis is down for five minutes?
+  - Keep last-known-good rules in memory, fall back to coarse local emergency buckets, and choose fail-open or fail-closed by endpoint criticality. Public read APIs often fail open; login, signup, and fraud-sensitive operations usually fail closed.
 - How would you rate limit by both user and IP without doubling every hot-path call?
+  - Evaluate both dimensions in one combined limiter request and keep the relevant counters in the same distributed store or Lua script. That preserves multi-dimensional enforcement without two separate network round trips.
 - How would you design quotas for weighted requests, such as image generation or expensive search operations?
+  - Add a request cost field so one call can consume more than one token, and define quotas in normalized cost units rather than raw request counts. This prevents cheap and expensive operations from sharing an unrealistic one-request-equals-one-unit budget.
 - How would you keep one noisy tenant from hot-spotting a single counter shard?
+  - Hash the descriptor, spread hot tenants across partition space where possible, and place a local front-line limiter at the edge so not every burst reaches the shared store. If one tenant is predictably huge, dedicate per-tenant partitions or leased regional budgets instead of treating it like an ordinary key.
