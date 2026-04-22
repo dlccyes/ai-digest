@@ -1,0 +1,27 @@
+.markdown-body .mermaid-block {
+  margin-bottom: 16px;
+}
+
+.markdown-body .mermaid-block .mermaid-render {
+  margin-bottom: 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 12px;
+  background-color: var(--color-codebg);
+}
+
+.markdown-body .mermaid-block .mermaid-render svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.markdown-body .mermaid-block.is-error .mermaid-source {
+  border-color: #b91c1c;
+}
+
+body[data-theme='dark'] .markdown-body .mermaid-block.is-error .mermaid-source {
+  border-color: #fca5a5;
+}

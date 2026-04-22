@@ -1,19 +1,31 @@
-{{- .Page.Store.Set "hasCodeBlocks" true -}}
-{{- $lang := .Type | default "" -}}
+{{- $lang := lower (.Type | default "") -}}
 {{- $attrs := .Attributes -}}
-{{- $classNames := slice "code-block-source" -}}
-{{- if $lang -}}
-  {{- $classNames = $classNames | append (printf "language-%s" $lang) -}}
+{{- if eq $lang "mermaid" -}}
+  {{- .Page.Store.Set "hasMermaid" true -}}
+  {{- $classNames := slice "mermaid-block" -}}
+  {{- with index $attrs "class" -}}
+    {{- $classNames = $classNames | append . -}}
+  {{- end -}}
+  <div class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}>
+    <pre tabindex="0" class="mermaid-source"><code>{{ .Inner | htmlEscape | safeHTML }}</code></pre>
+    <div class="mermaid-render" role="img" aria-label="Mermaid diagram" hidden></div>
+  </div>
+{{- else -}}
+  {{- .Page.Store.Set "hasCodeBlocks" true -}}
+  {{- $classNames := slice "code-block-source" -}}
+  {{- if $lang -}}
+    {{- $classNames = $classNames | append (printf "language-%s" $lang) -}}
+  {{- end -}}
+  {{- with index $attrs "class" -}}
+    {{- $classNames = $classNames | append . -}}
+  {{- end -}}
+  <div class="code-block">
+    <button
+      class="code-block-copy"
+      type="button"
+      data-copy-label="Copy"
+      data-copied-label="Copied"
+      aria-label="Copy code to clipboard">Copy</button>
+    <pre tabindex="0" class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}{{ with $lang }} data-lang="{{ . }}"{{ end }}><code{{ with $lang }} class="language-{{ . }}" data-lang="{{ . }}"{{ end }}>{{ .Inner | htmlEscape | safeHTML }}</code></pre>
+  </div>
 {{- end -}}
-{{- with index $attrs "class" -}}
-  {{- $classNames = $classNames | append . -}}
-{{- end -}}
-<div class="code-block">
-  <button
-    class="code-block-copy"
-    type="button"
-    data-copy-label="Copy"
-    data-copied-label="Copied"
-    aria-label="Copy code to clipboard">Copy</button>
-  <pre tabindex="0" class="{{ delimit $classNames " " }}"{{ with index $attrs "id" }} id="{{ . }}"{{ end }}{{ with $lang }} data-lang="{{ . }}"{{ end }}><code{{ with $lang }} class="language-{{ . }}" data-lang="{{ . }}"{{ end }}>{{ .Inner | htmlEscape | safeHTML }}</code></pre>
-</div>
