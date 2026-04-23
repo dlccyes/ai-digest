@@ -45,10 +45,29 @@ Scale assumptions:
   - abuse limits such as `5 failed logins/minute`
 - These are interview assumptions, not claims about any current provider's production traffic.
 
-Core APIs:
+API surface:
+
+The rate limiter is not the business API itself. It sits in front of ordinary product APIs and makes an admission decision before the request reaches application code. The API design has three separate views:
 
 ```http
-POST /v1/check
+# 1. Client-facing behavior for any protected product API.
+POST /v1/messages
+Authorization: Bearer <token>
+Idempotency-Key: <optional idempotency key>
+{
+  "recipientId": "u_123",
+  "body": "hello"
+}
+-> 201 Created
+
+# If the gateway rejects the request before it reaches the product service:
+HTTP/1.1 429 Too Many Requests
+Retry-After: 12
+RateLimit-Policy: 600;w=60
+RateLimit: remaining=0, reset=12
+
+# 2. Internal gateway-to-rate-limiter decision API.
+POST /internal/rate-limit/check
 {
   "descriptors": {
     "tenantId": "t_123",
@@ -69,7 +88,8 @@ POST /v1/check
   "resetAfterSeconds": 12
 }
 
-PUT /v1/rules/{ruleId}
+# 3. Admin/control-plane API for operators or product teams.
+PUT /admin/rate-limit/rules/{ruleId}
 {
   "scope": "plan=premium route=POST:/v1/messages",
   "algorithm": "token_bucket",
@@ -79,11 +99,11 @@ PUT /v1/rules/{ruleId}
   "mode": "enforce"
 }
 
-GET /v1/rules?scope=route=POST:/v1/messages
+GET /admin/rate-limit/rules?scope=route=POST:/v1/messages
 -> active rules + rule version
 ```
 
-On rejection, the gateway or middleware typically turns the decision into an external `429 Too Many Requests` response with retry metadata.
+The cache and counter-store details below are implementation choices for making the decision fast. They should not leak into the client-facing API beyond standard throttle responses and retry metadata.
 
 Core data model:
 
