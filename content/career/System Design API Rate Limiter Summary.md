@@ -205,25 +205,42 @@ Main bottlenecks to call out in an interview:
 Alex Xu and Grokking both walk through the standard algorithm menu:
 
 - Fixed window counter:
-  - simplest and cheapest
-  - allows edge bursts around window boundaries
+  - How it works: divide time into fixed windows, such as one-minute buckets. For each descriptor, store a counter keyed by `descriptor + window_start`. On each request, increment the counter for the current window and allow the request if the count is at or below the configured limit.
+  - Example: for `100 req/min`, every request between `12:00:00` and `12:00:59` increments the same counter. At `12:01:00`, the system starts a new counter.
+  - Strength: it is simple, cheap, and easy to implement with atomic increment plus TTL.
+  - Weakness: it allows boundary bursts. A client can send 100 requests at `12:00:59` and another 100 at `12:01:00`, effectively sending 200 requests in about two seconds.
+  - Use it when: approximate limits are acceptable and cost must be very low.
 - Sliding window log:
-  - very accurate
-  - expensive in memory because it stores many timestamps
+  - How it works: store the timestamp of every request for a descriptor, usually in a sorted set or ordered list. On each request, remove timestamps older than `now - window_size`, count the remaining timestamps, and allow the request only if the count is below the limit. If allowed, insert the current timestamp.
+  - Example: for `100 req/min`, a request at `12:01:20` checks all timestamps after `12:00:20`, not just the fixed `12:01` calendar minute.
+  - Strength: it is accurate for any rolling window and eliminates the fixed-window boundary burst problem.
+  - Weakness: it stores one timestamp per request, so memory and cleanup cost can become high for popular users, hot tenants, or high-QPS routes.
+  - Use it when: strict precision matters and the descriptor cardinality or traffic volume is bounded.
 - Sliding window counter:
-  - smoother than fixed window
-  - much cheaper than full logs
+  - How it works: keep coarse counters for the current and previous fixed windows, then estimate how much of the previous window should still count based on how far the current window has progressed. The estimate is usually `current_count + previous_count * overlap_fraction`.
+  - Example: if the current minute is 30% complete, about 70% of the previous minute still overlaps the last 60 seconds. A request decision uses the current minute's count plus roughly 70% of the previous minute's count.
+  - Strength: it smooths fixed-window edge bursts while storing only a few counters per descriptor.
+  - Weakness: it is approximate because it assumes requests in the previous window were evenly distributed.
+  - Use it when: you want a practical balance between accuracy and memory efficiency for customer-visible quotas.
 - Token bucket:
-  - excellent for burst absorption
-  - easy to reason about operationally
+  - How it works: each descriptor has a bucket with a maximum capacity and a refill rate. A request consumes one or more tokens. If enough tokens exist, the request is allowed and tokens are deducted; otherwise it is rejected or delayed. Tokens are replenished over time up to the bucket capacity.
+  - Example: with a refill rate of `10 tokens/sec` and capacity `100`, an idle client can accumulate up to 100 tokens and then burst 100 requests quickly, but sustained traffic still averages around 10 requests per second.
+  - Strength: it naturally supports bursts while preserving a long-term average rate. It also handles weighted requests cleanly by consuming multiple tokens for expensive operations.
+  - Weakness: the allowed burst size must be chosen carefully. A large bucket can permit spikes that downstream services cannot absorb.
+  - Use it when: short bursts are acceptable or desirable, especially at gateways, edges, or per-client admission checks.
 - Leaky bucket:
-  - useful when you want a steadier drain rate
+  - How it works: incoming requests enter a queue or bucket, and work leaves at a fixed drain rate. If the queue is full, new requests are rejected. This shapes traffic into a steady output rate rather than allowing bursts through immediately.
+  - Example: if the drain rate is `10 req/sec`, a burst of 100 requests may be queued and released steadily, while requests beyond the queue capacity are dropped.
+  - Strength: it protects downstream services from sudden spikes by smoothing output traffic.
+  - Weakness: queued requests add latency, and a pure leaky bucket is less friendly to clients that legitimately send short bursts.
+  - Use it when: the downstream system needs a stable request rate more than low-latency burst handling.
 
 Practical interview answer:
 
-- Use a local token bucket for immediate burst protection at the gateway.
-- Use a sliding window counter or token bucket in the shared store for customer-visible quotas.
+- Use a local token bucket for immediate burst protection at the gateway because it is cheap and absorbs normal client burstiness.
+- Use a sliding window counter or distributed token bucket in the shared store for customer-visible quotas because it gives a good balance of accuracy, memory usage, and implementation complexity.
 - Avoid full sliding logs except for low-cardinality or especially sensitive endpoints, because Grokking's memory discussion is still relevant.
+- Use leaky-bucket behavior when the goal is not only to reject excess traffic, but also to smooth accepted traffic before it reaches a fragile downstream dependency.
 
 ### Correctness under concurrency
 
