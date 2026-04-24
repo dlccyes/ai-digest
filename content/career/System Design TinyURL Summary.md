@@ -11,6 +11,8 @@ Selected problem: TinyURL
 
 Scope: Design a highly available URL shortening service that creates compact aliases, resolves them with very low latency, and records click analytics without putting the redirect path at risk.
 
+Also see <https://wiki.derricklin.net/software-development/System%20Design%20Interview/#url-shortener>
+
 ## Problem framing
 
 This is the classic URL shortener problem: map a short code to a long URL, make redirects fast, and survive a very read-heavy workload with occasional viral hot keys.

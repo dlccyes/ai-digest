@@ -11,6 +11,8 @@ Selected problem: Notification System
 
 Scope: Design a soft real-time notification platform that accepts events from internal services, renders user-facing messages, respects user preferences, and dispatches push, email, SMS, and in-app notifications reliably at large scale.
 
+Also see <https://wiki.derricklin.net/software-development/System%20Design%20Interview/#notification-system>
+
 ## Problem framing
 
 This is the classic "design a notification system" interview problem: build the shared infrastructure that product teams use whenever they need to notify users about security alerts, messages, payments, delivery updates, marketing campaigns, or feed changes. The core challenge is not just calling APNs, FCM, an SMS gateway, or an email provider. The harder parts are durable intake, preference filtering, fanout, queue isolation, retries, deduplication, rate limiting, observability, and honest delivery semantics.

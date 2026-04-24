@@ -11,6 +11,8 @@ Selected problem: News Feed
 
 Scope: Design a personalized feed service that lets users publish posts, reads recent and ranked posts from accounts they follow, and keeps feed retrieval fast while handling fanout skew, stale caches, media, and eventual consistency.
 
+Also see <https://wiki.derricklin.net/software-development/System%20Design%20Interview/#news-feed>
+
 ## Problem framing
 
 This is the classic "design a Facebook News Feed / Twitter timeline / Instagram home feed" interview problem. Grokking and Alex Xu frame it as two linked flows: feed publishing, where a new post enters storage and is propagated to followers, and feed retrieval, where a user gets a fast, paginated, hydrated list of feed items. DDIA's Twitter home-timeline example explains the central tradeoff: doing more work at write time makes reads fast, but high-follower authors create fanout storms; doing more work at read time avoids write amplification, but every feed read becomes an expensive merge.

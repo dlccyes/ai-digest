@@ -11,6 +11,8 @@ Selected problem: Chat/Messaging System
 
 Scope: Design a text-first chat platform for one-to-one and small-to-medium group conversations with presence, multi-device sync, offline delivery, and durable message history.
 
+Also see <https://wiki.derricklin.net/software-development/System%20Design%20Interview/#chat-system>
+
 ## Problem framing
 
 This is the classic interview problem of designing a real-time chat system without over-promising impossible guarantees. Grokking and Alex Xu both frame the core problem similarly: keep message delivery low-latency, keep history durable, handle offline users, and make multiple devices converge on the same conversation state. DDIA adds the deeper constraint: ordering, replication, partitioning, and delivery semantics must be chosen deliberately instead of hand-waving toward "global consistency."

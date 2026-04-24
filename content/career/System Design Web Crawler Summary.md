@@ -11,6 +11,8 @@ Selected problem: Web Crawler
 
 Scope: Design a large-scale, HTML-first web crawler for search indexing that discovers new URLs, respects host politeness and robots rules, deduplicates content, and keeps important pages reasonably fresh.
 
+Also see <https://wiki.derricklin.net/software-development/System%20Design%20Interview/#web-crawler>
+
 ## Problem framing
 
 This is the classic "design Googlebot" interview question. Grokking emphasizes the minimum crawler loop: start from seed URLs, fetch pages, extract links, dedupe, and repeat. Alex Xu frames the real interview difficulty more accurately: the hard parts are URL frontier design, politeness, prioritization, freshness, robustness, and avoiding bad content. DDIA supplies the missing systems lens: frontier queues, dedupe tables, document storage, and downstream indexing are separate dataflow stages, so the design should favor partitioned state, replayable logs, and idempotent consumers rather than pretending the entire pipeline is one giant transaction.
