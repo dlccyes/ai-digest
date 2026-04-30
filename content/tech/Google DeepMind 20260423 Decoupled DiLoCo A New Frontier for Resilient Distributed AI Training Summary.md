@@ -1,5 +1,5 @@
 ---
-date: 2026-04-23
+date: 2026-04-30
 title: "Google DeepMind 20260423 Decoupled DiLoCo A New Frontier for Resilient Distributed AI Training Summary"
 tags:
     - engineering-blog
