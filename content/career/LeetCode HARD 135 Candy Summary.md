@@ -116,15 +116,117 @@ class Solution:
             candies[index] = max(candies[index], candies[index + 1] + 1)
 ```
 
+## Optimal one-pass `O(1)` space solution
+
+The two-pass solution stores the candy count for every child. The optimal space solution avoids that array by counting the shape of the ratings as the scan moves left to right.
+
+The key is that only three local shapes matter:
+
+- an increasing run, such as `[1, 2, 3]`
+- a decreasing run, such as `[3, 2, 1]`
+- a flat break, such as `[2, 2]`
+
+For an increasing run of edge length `up`, the candies are:
+
+`1 + 2 + ... + (up + 1)`
+
+For a decreasing run of edge length `down`, the candies are also triangular:
+
+`(down + 1) + down + ... + 1`
+
+For a mountain that rises and then falls, the peak child belongs to both the increasing side and the decreasing side. The peak only needs enough candy to satisfy the longer side, so the algorithm must avoid counting the peak twice.
+
+### State variables
+
+The one-pass version keeps:
+
+- `total`: total candies counted so far
+- `up`: length of the current increasing slope
+- `down`: length of the current decreasing slope
+- `peak`: length of the most recent increasing slope before the current descent
+
+Each slope length counts edges, not children. For example, ratings `[1, 3, 5]` have an increasing slope length of `2`, and the required candies are `[1, 2, 3]`.
+
+### How the update works
+
+When `ratings[i] > ratings[i - 1]`, the current child extends an increasing run. If `up == 2`, the current child needs `3` candies, so add `up + 1` to the total.
+
+When `ratings[i] == ratings[i - 1]`, there is no neighbor constraint between these two children. The current child can receive one candy, and all slope state resets.
+
+When `ratings[i] < ratings[i - 1]`, the current child extends a decreasing run. A descending run discovered left to right is tricky because every new lower child may force earlier children in the run to be bumped up. Adding `down + 1` accounts for:
+
+- one candy for the current child
+- one additional candy for each earlier child in the current descending tail
+
+Then the peak correction decides whether to subtract one:
+
+- if `peak >= down`, the old peak is already tall enough, so subtract `1` to avoid double-counting it
+- if `down > peak`, the descent is longer than the rise, so the peak needs one more candy and no subtraction is made
+
+That condition is the core of the `O(1)` solution.
+
+### Python solution
+
+```python
+from typing import List
+
+
+class Solution:
+    def candy(self, ratings: List[int]) -> int:
+        if not ratings:
+            return 0
+
+        total = 1
+        up = 0
+        down = 0
+        peak = 0
+
+        for index in range(1, len(ratings)):
+            if ratings[index] > ratings[index - 1]:
+                up += 1
+                peak = up
+                down = 0
+                total += up + 1
+            elif ratings[index] == ratings[index - 1]:
+                up = 0
+                down = 0
+                peak = 0
+                total += 1
+            else:
+                up = 0
+                down += 1
+                total += down + 1
+
+                if peak >= down:
+                    total -= 1
+
+        return total
+```
+
+### Why the peak correction matters
+
+Consider `[1, 2, 3, 2, 1]`.
+
+The increasing part `[1, 2, 3]` contributes candies `[1, 2, 3]`, so `peak = 2` because the rise has two edges.
+
+Then the decreasing part has length `2`. The peak already has enough candy to be greater than both sides, so the algorithm subtracts one during each decreasing step where `peak >= down`. The final total is `9`, matching `[1, 2, 3, 2, 1]`.
+
+Now consider `[1, 2, 3, 2, 1, 0]`.
+
+The descent length becomes `3`, which is longer than the rise length `2`. At that point, the original peak candy count of `3` is not enough; the peak must be bumped to `4`. The algorithm handles that by not subtracting when `down > peak`, giving the final total `13`, matching `[1, 2, 4, 3, 2, 1]`.
+
+The complexity is:
+
+- Time: `O(n)` because each rating is processed once
+- Extra space: `O(1)` because only counters are stored
+
 ## Interview follow-ups
 
 ### Can this be solved with `O(1)` extra space?
 
-Yes. The space-optimized solution treats the ratings as a sequence of slopes: increasing runs, decreasing runs, and flat segments.
+Yes. The one-pass slope-counting solution above is the optimal version: `O(n)` time and `O(1)` extra space.
 
-For a mountain-shaped segment, such as ratings that rise and then fall, the candy counts form a matching mountain. The total can be computed from the length of the increasing slope and the length of the decreasing slope using triangular numbers. The peak belongs to both sides, so the algorithm adds the larger peak height only once.
-
-This works because only the shape of each monotonic run matters. The tradeoff is complexity: the `O(1)` version is harder to write correctly, especially around equal ratings and transitions between rising and falling runs. It keeps the same `O(n)` time complexity but reduces extra space from `O(n)` to `O(1)`.
+In an interview, the tradeoff is clarity. The two-pass greedy method is easier to explain and prove. The one-pass method is more space efficient, but it requires careful handling of equal ratings, slope transitions, and the peak correction when a decreasing run follows an increasing run.
 
 ### Why is a single left-to-right pass not enough?
 
