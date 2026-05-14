@@ -17,3 +17,4 @@ public/
 **/resources/_gen/
 _site/
 .sass-cache/
+.agents/settings.local.json
