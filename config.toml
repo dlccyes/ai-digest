@@ -12,7 +12,7 @@ disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
 
-summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
+summaryLength = 50 # Custom summary length, add <!--more--> in post file to custom split point
 
 [pagination]
   pagerSize = 10
