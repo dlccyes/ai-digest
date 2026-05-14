@@ -1,6 +1,6 @@
 ---
 date: 2026-05-13
-title: "LeetCode VARIANT Two-Color Necklace Splitting Summary"
+title: "LeetCode MEDIUM Two-Color Necklace Splitting Summary"
 tags:
     - leetcode
 ---
