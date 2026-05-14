@@ -95,7 +95,7 @@
 &lt;ul&gt;
 &lt;li&gt;Difficulty: &lt;code&gt;MEDIUM&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Problem: &lt;a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank"&gt;Kth Largest Element in a Stream&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Main tags: &lt;code&gt;Design&lt;/code&gt;, &lt;code&gt;Heap (Priority Queue)&lt;/code&gt;, &lt;code&gt;Data Stream&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Topics: &lt;code&gt;Design&lt;/code&gt;, &lt;code&gt;Heap (Priority Queue)&lt;/code&gt;, &lt;code&gt;Data Stream&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="problem-gist"&gt;Problem gist&lt;/h2&gt;
 &lt;p&gt;Design a collection that supports two operations in any interleaving:&lt;/p&gt;
