@@ -10,6 +10,9 @@
 [sidebarLinks]
     other = "External Links"
 
+[sidebarRandomPost]
+    other = "Random Post"
+
 [sidebarBangumiChart]
     other = "Bangumi"
 
@@ -44,6 +47,12 @@
 
 [tagsCurrentTag]
     other = "#{{ .Title }}"
+
+[randomPostTag]
+    other = "Random post with this tag"
+
+[randomPostSection]
+    other = "Random post in this category"
 
 [searchSuccess]
     other = "[NUM] results ([TIME] ms)"

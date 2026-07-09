@@ -1,0 +1,9 @@
+{{/* layouts/_default/index.postlist.json */}}
+{{/* Lightweight post index for the random-post links: [{u: url, s: section, t: [urlized tags]}] */}}
+{{- $index := slice -}}
+{{- range where .Site.RegularPages "Type" "not in" (slice "page" "json") -}}
+  {{- $tags := slice -}}
+  {{- range .Params.tags -}}{{- $tags = $tags | append (urlize .) -}}{{- end -}}
+  {{- $index = $index | append (dict "u" .RelPermalink "s" .Section "t" $tags) -}}
+{{- end -}}
+{{- $index | jsonify -}}

@@ -17,6 +17,8 @@
 {{ $options := (dict "targetPath" "assets/js/fuji.min.js" "minify" true "target" "es2015" "format" "iife") }}
 {{ $built := resources.Get "js/fuji.js" | js.Build $options }}
 <script defer src="{{ $built.RelPermalink }}"></script>
+{{ $randomPost := resources.Get "scripts/random-post.js" | fingerprint }}
+<script defer src="{{ $randomPost.RelPermalink }}" integrity="{{ $randomPost.Data.Integrity }}"></script>
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}

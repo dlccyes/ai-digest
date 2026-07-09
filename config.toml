@@ -33,7 +33,15 @@ defaultContentLanguage = 'en'
     weight = 90
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON", "postlist"]
+
+# Lightweight post index (url/section/tags) for the random-post links
+[outputFormats]
+[outputFormats.postlist]
+mediaType = "application/json"
+baseName = "postlist"
+isPlainText = true
+notAlternative = true
 
 # [permalinks]
 # post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"

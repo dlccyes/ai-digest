@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ if .IsSection }}
+<!-- random post within this category -->
+<div class="page-info">
+  <a href="#" class="random-post-link" data-index="{{ "postlist.json" | relLangURL }}" data-section="{{ .Section }}">🎲 {{ i18n "randomPostSection" }}</a>
+</div>
+{{ end }}
+
+{{ partial "list-contents.html" . }}
+
+
+{{ end }}
