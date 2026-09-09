@@ -61,8 +61,8 @@ def main() -> int:
     )
     parser.add_argument(
         "--generator",
-        default="AI",
-        help='Generator label, usually "<tool> with <model>".',
+        required=True,
+        help='Generator label formatted as "<tool> with <display model> <display reasoning level>".',
     )
     args = parser.parse_args()
 
