@@ -7,6 +7,13 @@ tags: [forecast, surfing, skydiving]
 
 The single best surf window is **Sunday, September 13 at 9 AM at Capitola** (9 alone / 10 with instructor); the single best jump slot is **Friday, September 11 at 9 AM** (✅), with Monday at 9 AM the calm backup.
 
+## Summary Calendar
+
+| | Friday, September 11 | Saturday, September 12 | Sunday, September 13 | Monday, September 14 |
+|---|---|---|---|---|
+| Morning | 🏄⚠️ ✈️✅ | 🏄✅ ✈️⚠️ | 🏄✅ ✈️⚠️ | 🏄✅ ✈️✅ |
+| Afternoon | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️⚠️ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ |
+
 ## Surfing
 
 ### Bottom Line
