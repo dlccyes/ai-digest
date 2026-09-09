@@ -3,6 +3,18 @@
   <h3><a href="#" class="random-post-link" data-index="{{ "postlist.json" | relLangURL }}">🎲 {{ i18n "sidebarRandomPost" }}</a></h3>
 </div>
 
+<!-- weekend forecast -->
+{{ with .Site.Menus.forecast }}
+<div class="sidebar-item sidebar-forecast">
+  <h3>Forecast</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
 <!-- languages -->
 {{ if .IsTranslated }}
 <div class="sidebar-item">

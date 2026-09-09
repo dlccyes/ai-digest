@@ -163,6 +163,11 @@ name = "News"
 url = "/news/"
 weight = 60
 
+[[menu.forecast]]
+name = "🏄 Weekend Forecast"
+url = "/forecast/"
+weight = 1
+
 [[menu.link]]
 name = "Personal Page"
 url = "https://www.derricklin.net"
