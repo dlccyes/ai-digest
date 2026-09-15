@@ -1,183 +1,182 @@
 ---
 title: Weekend Forecast
 url: /forecast/
-date: 2026-09-09
+date: 2026-09-15
 tags: [forecast, surfing, skydiving]
 ---
 
-The single best surf window is **Sunday, September 13 at 9 AM at Capitola** (9 alone / 10 with instructor); the single best jump slot is **Friday, September 11 at 9 AM** (✅), with Monday at 9 AM the calm backup.
+**Best surf:** Saturday, September 19 at 1 PM at Capitola (8.5 alone / 10 with instructor). **Best jump:** Friday, September 18 at 9 AM, the smoothest skydiving slot.
 
 ## Summary Calendar
 
-| | Friday, September 11 | Saturday, September 12 | Sunday, September 13 | Monday, September 14 |
+| | Friday, September 18 | Saturday, September 19 | Sunday, September 20 | Monday, September 21 |
 |---|---|---|---|---|
-| Morning | 🏄⚠️ ✈️✅ | 🏄✅ ✈️⚠️ | 🏄✅ ✈️⚠️ | 🏄✅ ✈️✅ |
-| Afternoon | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️⚠️ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ |
+| Morning | 🏄❓ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄❓ ✈️✅ |
+| Afternoon | 🏄❓ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄❓ ✈️✅ |
+
+Friday surf is unknown because NWS supplied a blank wind direction for a calm Capitola sample and the canonical calculator rejected the malformed field. Monday surf is unknown because the CDIP forecast ends at 2 PM, before the required 3 PM and 5 PM samples, so the pipeline rejected the incomplete day.
 
 ## Surfing
 
 ### Bottom Line
 
-- **Sunday, September 13 at 9 AM — Capitola: 9 alone / 10 with instructor.** About 2.5 ft faces, 3.1 ft incoming tide, and 5 mph N offshore wind.
-- **Sunday, September 13 at 9 AM — Cowell: 9 alone / 10 with instructor.** About 2.2 ft faces, 3.1 ft incoming tide, and 6 mph NNW offshore wind. Cowell’s modeled size is an upper bound until a session validates SC149.
-- **Monday, September 14 at 9 AM — Cowell: 8.5 alone / 9.5 with instructor.** About 1.8 ft faces, 3.0 ft incoming tide, and 2 mph NNW offshore wind. Capitola at 7–9 AM is nearly as good.
+- **Saturday, September 19 at 1 PM — Capitola: 8.5 alone / 10 with instructor.** About 2.1 ft faces, 3.7 ft incoming tide, 3 mph cross-shore wind, and 70°F air.
+- **Saturday, September 19 at 3 PM — Capitola: 8.5 alone / 10 with instructor.** About 2.0 ft faces, 4.2 ft incoming tide, 6 mph cross-shore wind, and 73°F air.
+- **Sunday, September 20 at 9 AM — Capitola: 8 alone / 9.5 with instructor.** About 2.2 ft faces, 3.7 ft outgoing tide, 2 mph offshore wind, and 58°F air. Sunday at 3 PM and 5 PM scores the same, with warmer air but more cross-shore wind.
 
-Saturday’s useful option is **Cowell at 7–9 AM** (7.5–8 alone / 9–9.5 with instructor); very strong afternoon WNW wind makes the rest of Saturday a poor beginner bet even though it is offshore there. Friday’s long-period south swell is too powerful at Capitola for the current 2.5 ft demonstrated limit; Cowell is gentler but only marginal-to-worthwhile early.
-
-The surf scores are conditional on a water-quality check. The county reports no active bacterial beach alert, but its current page still flags elevated domoic acid from Cowell Beach through Rio del Mar, covering both spots. Avoid swallowing water, stay well away from Neary Lagoon and Soquel Creek, and skip if a direct-contact advisory, visible bloom, or irritation is present.
+Only Saturday and Sunday could be scored. Friday is unscored because of malformed NWS wind-direction data; Monday is unscored because CDIP does not yet cover the full daylight sample grid. The county reports no active bacterial beach alerts, but its domoic-acid caution still covers Cowell through Rio del Mar, including both spots.
 
 ### Daily Tables
 
-» means tide, wind, or groundswell changes quickly before the next sample. MOP swell is at 15 m depth; only the long-period groundswell is converted into the estimated breaking face and scored.
+MOP swell is the 15 m model output. Only groundswell is translated into estimated breaking face and scored; mixed swell and wind sea are context. Friday and Monday show explicit data gaps rather than hand-adjusted estimates.
 
-#### Capitola — Friday, September 11 (sunrise 6:47 AM; sunset 7:21 PM)
+#### Capitola — Friday, September 18
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
+| Time | Status |
+|---|---|
+| 7 AM | ❓ Not scored — NWS reported calm at 0 mph but omitted wind direction; the canonical calculator rejected the field. |
+| 9 AM | ❓ Not scored — the full-day canonical run produced no output after the malformed 7 AM field. |
+| 11 AM | ❓ Not scored — the full-day canonical run produced no output after the malformed 7 AM field. |
+| 1 PM | ❓ Not scored — the full-day canonical run produced no output after the malformed 7 AM field. |
+| 3 PM | ❓ Not scored — the full-day canonical run produced no output after the malformed 7 AM field. |
+| 5 PM | ❓ Not scored — the full-day canonical run produced no output after the malformed 7 AM field. |
+
+#### Cowell — Friday, September 18
+
+| Time | Status |
+|---|---|
+| 7 AM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+| 9 AM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+| 11 AM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+| 1 PM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+| 3 PM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+| 5 PM | ❓ Not scored — the two-spot canonical run rejected Friday because of malformed Capitola NWS data. |
+
+#### Capitola — Saturday, September 19 (sunrise 6:53 AM; sunset 7:11 PM)
+
+| Time | Swell | Waves (est. face) | Tide | Wind | Air temp | Alone / With instructor |
 |---|---|---|---|---|---|---|
-| » 7 AM | ✗ 2.7 ft @ 15 s ↓ SSW, straight in ground; 0.7 ft @ 10 s mixed; 1.2 ft @ 8 s sea | ✗ 4.3 ft (×1.6), well above limit | ~ 1.3 ft incoming | ✓ ↖ 2 mph NW, offshore | ✓ 60°F, mostly sunny | 2.5 / 3 |
-| 9 AM | ✗ 2.8 ft @ 15 s ↓ SSW, straight in ground; 0.7 ft @ 11 s mixed; 1.2 ft @ 8 s sea | ✗ 3.9 ft (×1.4), well above limit | ✓ 3.6 ft incoming | ~ ↖ 2 mph WNW, cross-shore | ✗ 60°F, patchy fog | 1.5 / 2 |
-| 11 AM | ✗ 2.9 ft @ 15 s ↓ SSW, straight in ground; 0.6 ft @ 11 s mixed; 1.2 ft @ 8 s sea | ✗ 3.8 ft (×1.3), well above limit | ✗ 5.0 ft incoming, pinching/fat | ~ ← 6 mph W, cross-shore | ✓ 61°F, mostly sunny | 2 / 2.5 |
-| » 1 PM | ✗ 3.0 ft @ 15 s ↓ SSW, straight in ground; 0.6 ft @ 11 s mixed; 1.1 ft @ 7 s sea | ✗ 4.1 ft (×1.4), well above limit | ✓ 4.3 ft outgoing | ~ ← 6 mph W, cross-shore | ✓ 63°F, mostly sunny | 3 / 3.5 |
-| 3 PM | ✗ 3.0 ft @ 15 s ↓ SSW, straight in ground; 0.6 ft @ 11 s mixed; 1.1 ft @ 7 s sea | ✗ 4.8 ft (×1.6), well above limit | ~ 2.3 ft outgoing | ✗ ← 12 mph W, cross-shore | ✓ 65°F, sunny | 0 / 0.5 |
-| 5 PM | ✗ 3.0 ft @ 15 s ↓ SSW, straight in ground; 0.6 ft @ 11 s mixed; 1.1 ft @ 7 s sea | ✗ 4.8 ft (×1.6), well above limit | ~ 1.0 ft outgoing | ✗ ← 13 mph W, cross-shore | ✓ 64°F, sunny | 0 / 0.5 |
+| 7 AM | ✅ ↓ 1.4 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.2 ft (×1.5), in band | ✅ 3.4 ft incoming | ✅ ↑ 1 mph NNW, offshore | ❌ 56°F, patchy fog | 6 alone / 7.5 with instructor |
+| 9 AM | ✅ ↓ 1.5 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.1 ft (×1.4), in band | ✅ 3.6 ft outgoing | ✅ ↑ 2 mph N, offshore | ❌ 58°F, patchy fog | 7.5 alone / 9 with instructor |
+| 11 AM | ✅ ↓ 1.5 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.2 ft (×1.5), in band | ✅ 3.5 ft outgoing | ⚠️ ↙ 3 mph WSW, cross-shore | ✅ 63°F, mostly sunny | 8 alone / 9.5 with instructor |
+| 1 PM | ✅ ↓ 1.5 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.1 ft (×1.4), in band | ✅ 3.7 ft incoming | ⚠️ ↙ 3 mph WSW, cross-shore | ✅ 70°F, mostly sunny | 8.5 alone / 10 with instructor |
+| 3 PM | ✅ ↓ 1.5 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.0 ft (×1.4), in band | ✅ 4.2 ft incoming | ⚠️ ← 6 mph W, cross-shore | ✅ 73°F, sunny | 8.5 alone / 10 with instructor |
+| 5 PM | ✅ ↓ 1.4 ft @ 18 s SSW straight-in ground; ↓ 0.5 ft @ 10 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 1.9 ft (×1.3), in band | ❌ 4.5 ft incoming, pinching | ⚠️ ← 6 mph W, cross-shore | ✅ 71°F, sunny | 6.5 alone / 8 with instructor |
 
-#### Cowell — Friday, September 11 (sunrise 6:47 AM; sunset 7:21 PM)
+#### Cowell — Saturday, September 19 (sunrise 6:53 AM; sunset 7:11 PM)
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
+| Time | Swell | Waves (est. face) | Tide | Wind | Air temp | Alone / With instructor |
 |---|---|---|---|---|---|---|
-| » 7 AM | ~ 2.0 ft @ 17 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.1 ft @ 8 s sea | ~ 3.2 ft (×1.6), pushing limit | ✓ 1.3 ft incoming | ✓ ↖ 5 mph NW, offshore | ✓ 60°F, mostly sunny | 6 / 6.5 |
-| 9 AM | ~ 1.9 ft @ 17 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.0 ft @ 8 s sea | ~ 2.7 ft (×1.4), pushing limit | ~ 3.6 ft incoming | ✓ ↖ 3 mph NW, offshore | ✓ 60°F, mostly sunny | 6.5 / 7.5 |
-| 11 AM | ✓ 1.8 ft @ 17 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.0 ft @ 8 s sea | ✓ 2.4 ft (×1.3), in band | ✗ 5.0 ft incoming, pinching/fat | ~ ← 7 mph W, cross-shore | ✓ 60°F, mostly sunny | 4.5 / 6 |
-| » 1 PM | ✓ 1.8 ft @ 16 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.0 ft @ 7 s sea | ✓ 2.5 ft (×1.4), in band | ~ 4.3 ft outgoing | ~ ← 7 mph W, cross-shore | ✓ 63°F, mostly sunny | 6.5 / 8 |
-| 3 PM | ~ 1.8 ft @ 15 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.0 ft @ 7 s sea | ~ 2.8 ft (×1.6), pushing limit | ~ 2.3 ft outgoing | ✗ ← 16 mph W, cross-shore | ✓ 64°F, sunny | 4.5 / 5.5 |
-| 5 PM | ~ 1.8 ft @ 15 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 1.0 ft @ 7 s sea | ~ 2.8 ft (×1.6), pushing limit | ~ 1.0 ft outgoing | ✗ ↖ 20 mph WNW, offshore | ✓ 63°F, sunny | 4.5 / 5.5 |
+| 7 AM | ⚠️ ↓ 2.0 ft @ 18 s SSW straight-in ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.9 ft (×1.5), pushing limit | ✅ 3.4 ft incoming | ✅ ↑ 1 mph NNW, offshore | ❌ 56°F, patchy fog | 3 alone / 4 with instructor |
+| 9 AM | ⚠️ ↓ 2.0 ft @ 18 s SSW angled ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 3.6 ft outgoing, fat | ✅ ↑ 2 mph N, offshore | ⚠️ 59°F, partly sunny | 4.5 alone / 5.5 with instructor |
+| 11 AM | ⚠️ ↓ 2.0 ft @ 18 s SSW angled ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 3.0 ft (×1.5), pushing limit | ⚠️ 3.5 ft outgoing | ⚠️ ← 3 mph W, cross-shore | ✅ 64°F, mostly sunny | 5 alone / 5.5 with instructor |
+| 1 PM | ⚠️ ↓ 2.0 ft @ 18 s SSW angled ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 3.7 ft incoming, fat | ⚠️ ← 3 mph W, cross-shore | ✅ 71°F, mostly sunny | 4.5 alone / 5.5 with instructor |
+| 3 PM | ⚠️ ↓ 2.0 ft @ 18 s SSW angled ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 4.2 ft incoming, fat | ❌ ← 8 mph W, cross-shore | ✅ 74°F, sunny | 3.5 alone / 4.5 with instructor |
+| 5 PM | ⚠️ ↓ 1.9 ft @ 18 s SSW angled ground; ↓ 0.7 ft @ 10 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.5 ft (×1.3), pushing limit | ❌ 4.5 ft incoming, fat | ⚠️ ↖ 7 mph WNW, offshore | ✅ 73°F, sunny | 3 alone / 4.5 with instructor |
 
-#### Capitola — Saturday, September 12 (sunrise 6:48 AM; sunset 7:19 PM)
+#### Capitola — Sunday, September 20 (sunrise 6:53 AM; sunset 7:09 PM)
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
+| Time | Swell | Waves (est. face) | Tide | Wind | Air temp | Alone / With instructor |
 |---|---|---|---|---|---|---|
-| » 7 AM | ✗ 2.5 ft @ 14 s ↓ SSW, straight in ground; 0.6 ft @ 10 s mixed; 0.8 ft @ 6 s sea | ✗ 3.9 ft (×1.6), well above limit | ~ 1.3 ft incoming | ~ ↑ 6 mph NNW, offshore | ✓ 58°F, mostly sunny | 3 / 3.5 |
-| » 9 AM | ~ 2.4 ft @ 14 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.8 ft @ 6 s sea | ~ 3.6 ft (×1.5), pushing limit | ✓ 3.3 ft incoming | ~ ↑ 7 mph NNW, offshore | ✓ 58°F, mostly sunny | 5 / 5.5 |
-| 11 AM | ~ 2.3 ft @ 14 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.8 ft @ 6 s sea | ~ 3.0 ft (×1.3), pushing limit | ✗ 5.0 ft incoming, pinching/fat | ✗ ↖ 16 mph WNW, cross-shore | ✓ 58°F, mostly sunny | 3.5 / 4.5 |
-| » 1 PM | ~ 2.3 ft @ 14 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.8 ft @ 6 s sea | ~ 3.0 ft (×1.3), pushing limit | ✗ 4.8 ft outgoing, pinching/fat | ✗ ↖ 16 mph WNW, cross-shore | ✓ 61°F, mostly sunny | 3.5 / 4.5 |
-| » 3 PM | ~ 2.2 ft @ 14 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.8 ft @ 6 s sea | ~ 3.3 ft (×1.5), pushing limit | ✓ 2.9 ft outgoing | ✗ ↖ 26 mph WNW, cross-shore | ✓ 62°F, sunny | 3.5 / 4 |
-| 5 PM | ~ 2.2 ft @ 14 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.8 ft @ 6 s sea | ~ 3.5 ft (×1.6), pushing limit | ~ 1.1 ft outgoing | ✗ ↖ 17 mph WNW, cross-shore | ✓ 67°F, sunny | 2 / 2.5 |
+| 7 AM | ✅ ↓ 1.6 ft @ 17 s SSW straight-in ground; ↓ 0.4 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.4 ft (×1.5), in band | ✅ 3.4 ft incoming | ✅ ↑ 1 mph NNW, offshore | ❌ 56°F, patchy fog | 5.5 alone / 7 with instructor |
+| 9 AM | ✅ ↓ 1.6 ft @ 17 s SSW straight-in ground; ↓ 0.4 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.2 ft (×1.4), in band | ✅ 3.7 ft outgoing | ✅ ↖ 2 mph NW, offshore | ⚠️ 58°F, mostly cloudy | 8 alone / 9.5 with instructor |
+| 11 AM | ✅ ↓ 1.6 ft @ 17 s SSW straight-in ground; ↓ 0.4 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.4 ft (×1.5), in band | ✅ 3.4 ft outgoing | ⚠️ ↙ 3 mph WSW, cross-shore | ✅ 63°F, mostly sunny | 7.5 alone / 9 with instructor |
+| 1 PM | ✅ ↓ 1.6 ft @ 17 s SSW straight-in ground; ↓ 0.3 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.4 ft (×1.5), in band | ✅ 3.3 ft incoming | ⚠️ ↙ 3 mph WSW, cross-shore | ✅ 68°F, mostly sunny | 7.5 alone / 9 with instructor |
+| 3 PM | ✅ ↓ 1.6 ft @ 17 s SSW straight-in ground; ↓ 0.3 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ✅ 2.3 ft (×1.4), in band | ✅ 3.8 ft incoming | ⚠️ ↙ 6 mph WSW, cross-shore | ✅ 70°F, sunny | 8 alone / 9.5 with instructor |
+| 5 PM | ✅ ↓ 1.7 ft @ 17 s SSW straight-in ground; ↓ 0.3 ft @ 11 s S straight-in mixed; ↙ 0.6 ft @ 8 s SW angled sea | ✅ 2.3 ft (×1.4), in band | ✅ 4.4 ft incoming | ⚠️ ← 6 mph W, cross-shore | ✅ 69°F, sunny | 8 alone / 9.5 with instructor |
 
-#### Cowell — Saturday, September 12 (sunrise 6:48 AM; sunset 7:19 PM)
+#### Cowell — Sunday, September 20 (sunrise 6:53 AM; sunset 7:09 PM)
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
+| Time | Swell | Waves (est. face) | Tide | Wind | Air temp | Alone / With instructor |
 |---|---|---|---|---|---|---|
-| » 7 AM | ✓ 1.6 ft @ 15 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.8 ft @ 6 s sea | ✓ 2.6 ft (×1.6), in band | ✓ 1.3 ft incoming | ~ ↑ 12 mph NNW, offshore | ✓ 58°F, mostly sunny | 7.5 / 9 |
-| » 9 AM | ✓ 1.6 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.8 ft @ 7 s sea | ✓ 2.4 ft (×1.5), in band | ✓ 3.3 ft incoming | ~ ↑ 14 mph NNW, offshore | ✓ 58°F, mostly sunny | 8 / 9.5 |
-| 11 AM | ✓ 1.6 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.1 ft (×1.3), in band | ✗ 5.0 ft incoming, pinching/fat | ✗ ↖ 25 mph WNW, offshore | ✓ 59°F, mostly sunny | 4.5 / 6 |
-| » 1 PM | ✓ 1.6 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.1 ft (×1.3), in band | ✗ 4.8 ft outgoing, pinching/fat | ✗ ↖ 25 mph WNW, offshore | ✓ 60°F, mostly sunny | 4.5 / 6 |
-| » 3 PM | ✓ 1.6 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 7 s sea | ✓ 2.4 ft (×1.5), in band | ~ 2.9 ft outgoing | ✗ ↖ 39 mph WNW, offshore | ✓ 61°F, sunny | 6 / 7.5 |
-| 5 PM | ✓ 1.6 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 6 s sea | ✓ 2.6 ft (×1.6), in band | ~ 1.1 ft outgoing | ✗ ↖ 24 mph NW, offshore | ✓ 66°F, sunny | 5.5 / 7 |
+| 7 AM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.5 ft @ 11 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 3.0 ft (×1.5), pushing limit | ✅ 3.4 ft incoming | ✅ ↑ 2 mph NNW, offshore | ⚠️ 57°F, mostly cloudy | 4 alone / 5 with instructor |
+| 9 AM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.5 ft @ 11 s S straight-in mixed; ↓ 0.5 ft @ 8 s SSW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 3.7 ft outgoing, fat | ✅ ↖ 2 mph NW, offshore | ⚠️ 60°F, mostly cloudy | 4.5 alone / 5.5 with instructor |
+| 11 AM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.5 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ⚠️ 3.0 ft (×1.5), pushing limit | ⚠️ 3.4 ft outgoing | ⚠️ ← 5 mph W, cross-shore | ✅ 64°F, mostly sunny | 5 alone / 6 with instructor |
+| 1 PM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.5 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ⚠️ 3.0 ft (×1.5), pushing limit | ✅ 3.3 ft incoming | ⚠️ ← 5 mph W, cross-shore | ✅ 69°F, mostly sunny | 5 alone / 6 with instructor |
+| 3 PM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.5 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 3.8 ft incoming, fat | ❌ ← 8 mph W, cross-shore | ✅ 72°F, mostly sunny | 3.5 alone / 4.5 with instructor |
+| 5 PM | ⚠️ ↓ 2.0 ft @ 17 s SSW angled ground; ↓ 0.4 ft @ 11 s S straight-in mixed; ↙ 0.5 ft @ 8 s SW angled sea | ⚠️ 2.8 ft (×1.4), pushing limit | ⚠️ 4.4 ft incoming, fat | ⚠️ ← 7 mph W, cross-shore | ✅ 71°F, sunny | 4.5 alone / 5.5 with instructor |
 
-#### Capitola — Sunday, September 13 (sunrise 6:48 AM; sunset 7:18 PM)
+#### Capitola — Monday, September 21
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
-|---|---|---|---|---|---|---|
-| » 7 AM | ✓ 1.7 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.7 ft (×1.6), in band | ~ 1.5 ft incoming | ✓ ↑ 5 mph NNW, offshore | ~ 56°F, sunny | 6.5 / 8 |
-| » 9 AM | ✓ 1.7 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.5 ft (×1.5), in band | ✓ 3.1 ft incoming | ✓ ↑ 5 mph N, offshore | ✓ 58°F, sunny | 9 / 10 |
-| 11 AM | ✓ 1.6 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.1 ft (×1.3), in band | ✗ 4.8 ft incoming, pinching/fat | ~ ↖ 5 mph WNW, cross-shore | ✓ 63°F, sunny | 6.5 / 8 |
-| » 1 PM | ✓ 1.6 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.1 ft (×1.3), in band | ✗ 5.1 ft outgoing, beach pinched | ~ ↖ 5 mph WNW, cross-shore | ✓ 68°F, sunny | N/A — high tide, beach pinched |
-| » 3 PM | ✓ 1.6 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.2 ft (×1.4), in band | ✓ 3.6 ft outgoing | ✗ ← 12 mph W, cross-shore | ✓ 70°F, sunny | 8 / 9.5 |
-| 5 PM | ✓ 1.6 ft @ 13 s ↓ SSW, straight in ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.5 ft (×1.6), in band | ~ 1.5 ft outgoing | ✗ ↖ 15 mph WNW, cross-shore | ✓ 69°F, sunny | 6 / 7.5 |
+| Time | Status |
+|---|---|
+| 7 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 9 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 11 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 1 PM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 3 PM | ❓ N/A — CDIP forecast coverage is unavailable. |
+| 5 PM | ❓ N/A — CDIP forecast coverage is unavailable. |
 
-#### Cowell — Sunday, September 13 (sunrise 6:48 AM; sunset 7:18 PM)
+#### Cowell — Monday, September 21
 
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
-|---|---|---|---|---|---|---|
-| » 7 AM | ✓ 1.5 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 2.4 ft (×1.6), in band | ✓ 1.5 ft incoming | ~ ↑ 6 mph NNW, offshore | ~ 56°F, sunny | 7 / 8.5 |
-| » 9 AM | ✓ 1.5 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.5 ft @ 8 s sea | ✓ 2.2 ft (×1.5), in band | ✓ 3.1 ft incoming | ~ ↑ 6 mph NNW, offshore | ✓ 59°F, sunny | 9 / 10 |
-| 11 AM | ✓ 1.5 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.5 ft @ 8 s sea | ✓ 1.9 ft (×1.3), in band | ✗ 4.8 ft incoming, not breaking | ~ ↖ 7 mph WNW, offshore | ✓ 64°F, sunny | N/A — high tide, not breaking |
-| » 1 PM | ✓ 1.4 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.5 ft @ 8 s sea | ✓ 1.9 ft (×1.3), in band | ✗ 5.1 ft outgoing, not breaking | ~ ↖ 7 mph WNW, offshore | ✓ 68°F, sunny | N/A — high tide, not breaking |
-| » 3 PM | ✓ 1.4 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.5 ft @ 8 s sea | ✓ 2.0 ft (×1.4), in band | ~ 3.6 ft outgoing | ✗ ↖ 18 mph WNW, offshore | ✓ 70°F, sunny | 6.5 / 8 |
-| 5 PM | ✓ 1.4 ft @ 14 s ↓ SSW, angled ground; 0.5 ft @ 11 s mixed; 0.6 ft @ 8 s sea | ✓ 2.2 ft (×1.6), in band | ~ 1.5 ft outgoing | ✗ ↖ 23 mph WNW, offshore | ✓ 69°F, sunny | 7 / 8.5 |
-
-#### Capitola — Monday, September 14 (sunrise 6:49 AM; sunset 7:16 PM)
-
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
-|---|---|---|---|---|---|---|
-| 7 AM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.5 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 2.4 ft (×1.6), in band | ~ 1.9 ft incoming | ✓ ↑ 2 mph NNW, offshore | ~ 57°F, mostly sunny | 8 / 9.5 |
-| » 9 AM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.3 ft (×1.5), in band | ✓ 3.0 ft incoming | ✓ ↑ 2 mph N, offshore | ✗ 59°F, patchy fog | 8 / 9.5 |
-| 11 AM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.6 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.0 ft (×1.3), in band | ✗ 4.6 ft incoming, pinching/fat | ~ ← 3 mph WSW, cross-shore | ✓ 63°F, mostly sunny | 6 / 7.5 |
-| 1 PM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.6 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.0 ft (×1.3), in band | ✗ 5.2 ft outgoing, beach pinched | ~ ← 3 mph WSW, cross-shore | ✓ 67°F, mostly sunny | N/A — high tide, beach pinched |
-| » 3 PM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.6 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.1 ft (×1.4), in band | ✓ 4.2 ft outgoing | ✗ ← 8 mph WSW, cross-shore | ✓ 69°F, mostly sunny | 7.5 / 9 |
-| 5 PM | ✓ 1.5 ft @ 12 s ↓ SSW, straight in ground; 0.5 ft @ 10 s mixed; 0.7 ft @ 8 s sea | ✓ 2.4 ft (×1.6), in band | ~ 2.2 ft outgoing | ✗ ← 9 mph W, cross-shore | ✓ 68°F, sunny | 7 / 8.5 |
-
-#### Cowell — Monday, September 14 (sunrise 6:49 AM; sunset 7:16 PM)
-
-| Time | Swell | Waves (est. face) | Tide | Wind | Temp | Alone / With instructor |
-|---|---|---|---|---|---|---|
-| 7 AM | ✓ 1.2 ft @ 13 s ↓ SSW, angled ground; 0.5 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 2.0 ft (×1.6), in band | ✓ 1.9 ft incoming | ✓ ↑ 2 mph NNW, offshore | ~ 57°F, mostly sunny | 8 / 9.5 |
-| » 9 AM | ✓ 1.2 ft @ 13 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 1.8 ft (×1.5), in band | ✓ 3.0 ft incoming | ✓ ↑ 2 mph NNW, offshore | ✓ 59°F, mostly sunny | 8.5 / 9.5 |
-| 11 AM | ~ 1.1 ft @ 13 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ~ 1.5 ft (×1.3), thin | ✗ 4.6 ft incoming, not breaking | ~ ← 5 mph W, cross-shore | ✓ 63°F, mostly sunny | N/A — high tide, not breaking |
-| » 1 PM | ✓ 1.2 ft @ 17 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 1.5 ft (×1.3), in band | ✗ 5.2 ft outgoing, not breaking | ~ ← 5 mph W, cross-shore | ✓ 67°F, mostly sunny | N/A — high tide, not breaking |
-| » 3 PM | ✓ 1.2 ft @ 18 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 1.6 ft (×1.4), in band | ~ 4.2 ft outgoing | ✗ ← 12 mph W, cross-shore | ✓ 69°F, mostly sunny | 6 / 7.5 |
-| 5 PM | ✓ 1.2 ft @ 18 s ↓ SSW, angled ground; 0.6 ft @ 10 s mixed; 0.6 ft @ 8 s sea | ✓ 1.9 ft (×1.6), in band | ~ 2.2 ft outgoing | ~ ↖ 15 mph WNW, offshore | ✓ 68°F, sunny | 7.5 / 9 |
+| Time | Status |
+|---|---|
+| 7 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 9 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 11 AM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 1 PM | ❓ Not scored — the full-day run was rejected because CDIP coverage ends at 2 PM. |
+| 3 PM | ❓ N/A — CDIP forecast coverage is unavailable. |
+| 5 PM | ❓ N/A — CDIP forecast coverage is unavailable. |
 
 ## Skydiving
 
 ### Bottom Line
 
-Best slot is Friday at 9 AM; Monday at 9 AM is the calm backup. Saturday has no ✅ window, though 9 AM–1 PM remains marginal before the student wind hold begins at 2 PM.
+Friday at 9 AM is the smoothest slot, with 9 AM on Saturday through Monday as calm backups; every day has ✅ windows.
 
 ### Daily Tables
 
-Air spread is gust minus sustained. Verdicts are expectations; the dropzone makes the call.
+Spread means gust minus sustained.
 
-#### Friday, September 11 — sunrise 6:43 AM; sunset 7:21 PM
-
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ← 3 mph W | 73 °F | 0 mm | none — gust 10 mph, spread 7 mph | ✅ |
-| 11 AM | ↖ 6 mph WNW | 83 °F | 0 mm | gusty — gust 16 mph, spread 10 mph | ✅ |
-| 1 PM | ↖ 6 mph WNW | 89 °F | 0 mm | gusty — gust 16 mph, spread 10 mph | ✅ |
-| 3 PM | ← 13 mph W | 91 °F | 0 mm | rough — gust 25 mph, spread 13 mph | ⚠️ |
-| 5 PM | ← 14 mph W | 90 °F | 0 mm | rough — gust 26 mph, spread 13 mph | ⚠️ |
-
-#### Saturday, September 12 — sunrise 6:44 AM; sunset 7:20 PM
+#### Friday, September 18 — sunrise 6:49 AM, sunset 7:10 PM
 
 | Time | Wind | Temp | Rain | Air | Flyable |
 |---|---|---|---|---|---|
-| 9 AM | ↙ 13 mph WSW | 67 °F | 0 mm | rough — gust 25 mph, spread 13 mph | ⚠️ |
-| 11 AM | ← 14 mph W | 76 °F | 0 mm | rough — gust 26 mph, spread 13 mph | ⚠️ |
-| 1 PM | ← 14 mph W | 80 °F | 0 mm | rough — gust 26 mph, spread 13 mph | ⚠️ |
-| 2 PM | ← 17 mph W | 80 °F | 0 mm | rough — gust 30 mph, spread 13 mph | ❌ |
-| 3 PM | ← 17 mph W | 81 °F | 0 mm | rough — gust 30 mph, spread 13 mph | ❌ |
-| 5 PM | ← 16 mph W | 79 °F | 0 mm | rough — gust 29 mph, spread 13 mph | ❌ |
+| 9 AM | ↖ 2 mph WNW | 67 °F | 0 mm | none — gust 8 mph, spread 6 mph | ✅ |
+| 11 AM | ↑ 5 mph NNW | 77 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
+| 1 PM | ↑ 5 mph NNW | 84 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
+| 3 PM | ↖ 9 mph NW | 88 °F | 0 mm | gusty — gust 18 mph, spread 9 mph | ✅ |
+| 5 PM | ↖ 8 mph WNW | 88 °F | 0 mm | gusty — gust 18 mph, spread 10 mph | ✅ |
 
-#### Sunday, September 13 — sunrise 6:45 AM; sunset 7:18 PM
-
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ← 12 mph W | 65 °F | 0 mm | gusty — gust 24 mph, spread 13 mph | ⚠️ |
-| 11 AM | ↖ 15 mph NW | 75 °F | 0 mm | rough — gust 28 mph, spread 13 mph | ❌ |
-| 1 PM | ↖ 15 mph NW | 81 °F | 0 mm | rough — gust 28 mph, spread 13 mph | ❌ |
-| 3 PM | ↖ 14 mph NW | 83 °F | 0 mm | rough — gust 25 mph, spread 12 mph | ⚠️ |
-| 5 PM | ↖ 10 mph NW | 83 °F | 0 mm | gusty — gust 22 mph, spread 12 mph | ✅ |
-
-#### Monday, September 14 — sunrise 6:46 AM; sunset 7:17 PM
+#### Saturday, September 19 — sunrise 6:50 AM, sunset 7:09 PM
 
 | Time | Wind | Temp | Rain | Air | Flyable |
 |---|---|---|---|---|---|
-| 9 AM | ← 3 mph W | 67 °F | 0 mm | none — gust 9 mph, spread 6 mph | ✅ |
-| 11 AM | ↖ 5 mph NNW | 78 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
-| 1 PM | ↖ 5 mph NNW | 84 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
-| 3 PM | ↖ 7 mph NW | 86 °F | 0 mm | gusty — gust 16 mph, spread 9 mph | ✅ |
-| 5 PM | ↖ 7 mph WNW | 86 °F | 0 mm | gusty — gust 17 mph, spread 10 mph | ✅ |
+| 9 AM | ← 2 mph W | 68 °F | 0 mm | none — gust 8 mph, spread 6 mph | ✅ |
+| 11 AM | ↖ 3 mph NW | 79 °F | 0 mm | gusty — gust 13 mph, spread 10 mph | ✅ |
+| 1 PM | ↖ 3 mph NW | 85 °F | 0 mm | gusty — gust 13 mph, spread 10 mph | ✅ |
+| 3 PM | ↖ 8 mph NW | 88 °F | 0 mm | none — gust 16 mph, spread 8 mph | ✅ |
+| 5 PM | ↖ 8 mph WNW | 87 °F | 0 mm | gusty — gust 18 mph, spread 10 mph | ✅ |
+
+#### Sunday, September 20 — sunrise 6:51 AM, sunset 7:07 PM
+
+| Time | Wind | Temp | Rain | Air | Flyable |
+|---|---|---|---|---|---|
+| 9 AM | ← 3 mph W | 67 °F | 0 mm | none — gust 10 mph, spread 7 mph | ✅ |
+| 11 AM | ↖ 5 mph NW | 77 °F | 0 mm | gusty — gust 14 mph, spread 9 mph | ✅ |
+| 1 PM | ↖ 5 mph NW | 83 °F | 0 mm | gusty — gust 14 mph, spread 9 mph | ✅ |
+| 3 PM | ↖ 8 mph WNW | 86 °F | 0 mm | gusty — gust 17 mph, spread 9 mph | ✅ |
+| 5 PM | ↖ 9 mph WNW | 85 °F | 0 mm | gusty — gust 18 mph, spread 9 mph | ✅ |
+
+#### Monday, September 21 — sunrise 6:52 AM, sunset 7:06 PM
+
+| Time | Wind | Temp | Rain | Air | Flyable |
+|---|---|---|---|---|---|
+| 9 AM | ← 3 mph W | 66 °F | 0 mm | none — gust 10 mph, spread 7 mph | ✅ |
+| 11 AM | ↖ 5 mph NW | 76 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
+| 1 PM | ↖ 5 mph NW | 82 °F | 0 mm | gusty — gust 15 mph, spread 10 mph | ✅ |
+| 3 PM | ↖ 9 mph WNW | 85 °F | 0 mm | gusty — gust 18 mph, spread 9 mph | ✅ |
+| 5 PM | ↖ 9 mph WNW | 84 °F | 0 mm | gusty — gust 20 mph, spread 11 mph | ✅ |
 
 ## Safety
 
-- [NWS active-alert checks](https://api.weather.gov/alerts/active?point=36.94873,-122.02122), updated Wednesday, September 9 at 2:38 AM PDT, returned 0 active alerts across the two beach points. The sampled [Capitola](https://api.weather.gov/gridpoints/MTR/94,66/forecast/hourly) and [Cowell](https://api.weather.gov/gridpoints/MTR/91,66/forecast/hourly) forecasts show no rain and no thunder through Monday.
-- The [Santa Cruz County advisory page](https://www.scceh.com/NewHome/Programs/WaterResources/SurfaceWaterStewardship/WaterQualityMonitoring/BeachWaterBodyAdvisories.aspx), updated September 1 from August 31 sampling, says no active bacterial beach alerts but reports elevated domoic acid from Cowell Beach to Rio del Mar. The county notes possible skin, eye, mouth, and throat irritation; ingestion is the principal toxin route. This is an unresolved caution, not a scored closure.
-- Neary Lagoon outfall at Cowell and the Soquel Creek mouth at Capitola are permanently posted for impaired water quality. Keep well away from both. The county’s 72-hour post-rain precaution applies if unexpected rain occurs.
-- Saturday afternoon wind is forecast at 26 mph cross-shore at Capitola and up to 39 mph offshore at Cowell. Direction prevents a formal blowout gate, but board handling, paddling, and rescue become poor beginner propositions; prefer morning.
-- [Buoy 46251](https://www.ndbc.noaa.gov/data/realtime2/46251.txt) observed 1.3 m at 10 s from the south at Wednesday 1:56 AM PDT and reported 21.5°C / 70.7°F water. That unusually warm offshore sensor reading is context only; wear a full wetsuit and do not assume beach water is equally warm.
+- [NWS Capitola](https://api.weather.gov/alerts/active?point=36.9735%2C-121.9530) and [NWS Cowell](https://api.weather.gov/alerts/active?point=36.9616%2C-122.0243) active-alert checks, fetched Tuesday, September 15 around 7:06 AM PDT, returned 0 alerts. Both weather points resolved as land-side shoreline grids.
+- The [Santa Cruz County advisory page](https://www.scceh.com/NewHome/Programs/WaterResources/SurfaceWaterStewardship/WaterQualityMonitoring/BeachWaterBodyAdvisories.aspx), updated September 9 from September 8 sampling, reports no active bacterial beach alerts. It still reports elevated domoic acid from Cowell Beach through Rio del Mar, covering both breaks, with possible skin, eye, mouth, and throat irritation; ingestion is the principal toxin route. This is a caution, not a closure.
+- Neary Lagoon outfall at Cowell and the Soquel Creek mouth at Capitola are permanently posted for impaired water quality. Keep well away from both. The county's precautionary direct-contact advisory applies for 72 hours after rain; skip if rain occurs before the session or if a new advisory appears.
+- The weekend's long 17–18 s south groundswell is organized but consequential. Capitola remains in the current 2.5 ft face-height band; Cowell's 2.5–3.0 ft model estimate presses or exceeds it and SC149 may overstate the protected break. A same-day look is important.
+- [Buoy 46251](https://www.ndbc.noaa.gov/data/realtime2/46251.txt) observed 1.4 m at 8 s from the northwest at Tuesday 6:26 AM PDT and reported 20.9°C / 69.6°F water. This offshore observation is context only; use a full wetsuit and do not assume the beach water is equally warm.
 
 ## Sources
 
-- Surf: `Capitola Cowell Surf 20260911 - 20260914 Summary.md` — generated September 9, 2026.
-- Skydiving: `Skydive California 20260911 - 20260914 Summary.md` — generated September 9, 2026.
+- Surf: `Capitola Cowell Surf Forecast 20260918 - 20260921 Summary.md` — generated September 15, 2026.
+- Skydiving: `Skydive California Forecast 20260918 - 20260921 Summary.md` — generated September 15, 2026.
