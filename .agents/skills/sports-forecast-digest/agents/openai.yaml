@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sports Forecast Digest"
+  short_description: "Publish and notify the combined sports forecast"
+  default_prompt: "Use $sports-forecast-digest to publish the latest combined sports forecast and send its concise Telegram highlight."
