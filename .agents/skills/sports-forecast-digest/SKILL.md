@@ -1,6 +1,6 @@
 ---
 name: sports-forecast-digest
-description: Build and publish the combined Capitola/Cowell surf and Skydive California forecast page from obs_life forecast notes, with an optional highlight-only Telegram notification. Use for the recurring ai-digest sports forecast or when refreshing its stable forecast page.
+description: Build and publish the combined Capitola/Cowell surf and Skydive California forecast page from ndoli forecast notes, with an optional highlight-only Telegram notification. Use for the recurring ai-digest sports forecast or when refreshing its stable forecast page.
 ---
 
 # Sports Forecast Digest
@@ -65,7 +65,7 @@ When git publishing is requested, commit and push only the refreshed forecast pa
 
 ## Telegram Highlight
 
-Only when the caller explicitly requests and authorizes delivery, use [$telegram-notifier](/Users/dlcc/github/ndoli/.agents/skills/telegram-notifier/SKILL.md). The notifier lives in `obs_life`, not this repository, so always use that absolute skill path.
+Only when the caller explicitly requests and authorizes delivery, use [$telegram-notifier](/Users/dlcc/github/ndoli/.agents/skills/telegram-notifier/SKILL.md). The notifier lives in `ndoli`, not this repository, so always use that absolute skill path.
 
 Compose a concise Markdown message containing only:
 
