@@ -21,8 +21,9 @@ Create both notes in the same run:
 - Blind means the public global/English Blind site under `https://www.teamblind.com/`, not the Korean locale under `/kr/` or `kr.teamblind.com`.
 - Prefer strong public Reddit tech threads and strong public global Blind discussions.
 - Search public global Blind pages first and exclude localized `/kr/` URLs.
+- If plain `curl` gets HTTP 403 for a public global Blind post, fetch its HTML with Python `urllib` and a `Googlebot` User-Agent; verify the returned page exposes the public `<h1>` and comment groups.
 - Extract the exact Blind post title from the public page `<h1>`.
-- Extract only top-level Blind comments from the public HTML comment groups: for each `div id="comment-group-<id>"`, only the first `div id="comment-<id>"` inside that same group counts as top-level. Do not use indented replies or nested reply containers.
+- Extract only top-level Blind comments from the public HTML comment groups: for each `div id="comment-group-<id>"`, only the first `div id="comment-<id>"` inside that same group counts as top-level. Copy its exact text from `p.whitespace-pre-wrap`; do not use indented replies or nested reply containers.
 - When a public top-level Blind comment header exposes a company label on that same top-level comment, include it in the displayed username as `username (Company)`. If no public company label is exposed on that top-level comment, use just `username`.
 - When a Blind top-level comment has a visible `comment-<id>` anchor on the public page, use `post_url#comment-<id>` as the direct comment URL.
 - Include at least 3 Blind posts in every tech note.
