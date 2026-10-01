@@ -1,124 +1,139 @@
 ---
 title: Weekend Forecast
 url: /forecast/
-date: 2026-09-29
+date: 2026-09-30
 tags: [forecast, surfing, skydiving]
 ---
 
-**Best surf:** unavailable—no Friday–Monday reading can be scored yet. **Best jump:** Sunday, October 4 at 9 AM at Skydive California, the earliest of the two tied calmest slots (0 mph wind, gusts 3 mph). All times PDT.
+**Best surf:** Cowell, Sunday, October 4 at 11 AM — 9 alone / 10 with instructor, the earliest of three tied top readings (Sunday 11 AM and 1 PM, Monday 9 AM). Capitola is closed to surfing by a county bacterial beach alert. **Best jump:** Sunday, October 4 at 9 AM at Skydive California — calm wind, gusts 5 mph, the smoothest slot in a window that is ✅ at every sample. All times PDT.
 
 ## Summary Calendar
 
 | | Friday, October 2 | Saturday, October 3 | Sunday, October 4 | Monday, October 5 |
 |---|---|---|---|---|
-| Morning | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ |
-| Afternoon | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ | 🏄❓ ✈️✅ |
-
-Required surf data is incomplete: NWS supplied blank wind directions in the Friday–Sunday source bundles, and CDIP coverage ends Monday at 2 PM, before the 3 PM and 5 PM samples. The surf verdicts are unknown, not unsafe or poor.
+| Morning | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ |
+| Afternoon | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ |
 
 ## Surfing
 
 ### Bottom Line
 
-No Friday–Monday reading can be scored or recommended yet. Fresh designated-source bundles were fetched Tuesday, September 29 at 7:04 AM PDT, but the canonical calculator rejected Friday, Saturday, and Sunday because NWS supplied unsupported blank wind directions with calm `0 mph` periods. Monday could not be fetched as a complete day because both CDIP MOP forecasts stop at **2 PM PDT**, before the required 3 PM and 5 PM readings.
+**Cowell is the beach this weekend. Capitola is closed to surfing by a county bacterial beach alert.**
 
-The `❓` calendar cells mean **unknown**, not unsafe or poor. No wind direction was inferred from calm speed, no source data was edited, and no partial score was promoted into a day verdict. Recheck Thursday evening before choosing a spot or booking around these conditions.
+- **Best readings:** Cowell **Sunday 11 AM and 1 PM** and **Monday 9 AM**, each **9 alone / 10 with instructor**. Next best are Cowell Sunday 9 AM and Monday 11 AM and 1 PM, each 8.5 / 10.
+- **Friday and Saturday** are a step lower but still good: Cowell scores 7.5 / 9 at 9 AM on both days, and 8 / 9.5 at 5 PM Friday.
+- **Capitola:** every reading on all four days is gated by the active Santa Cruz County beach alert at Capitola Beach at Soquel Creek (sampled September 28). Its waves would otherwise be similar to Cowell's.
+- **Waves:** a long-period SSW groundswell (14–17 s) gives Cowell faces of about 1.8–2.5 ft. That is inside your 2.5 ft limit and mostly 2 ft or more.
+- **Wind:** mornings are calm or lightly offshore, and afternoons have a light westerly cross-shore breeze of 6 mph at most.
+- **Tide:** high afternoon tides (5.1–5.5 ft) are the main drag. They make Cowell fat, and they gate Sunday 5 PM because the waves stop breaking.
 
 ### Daily Tables
 
-The required deterministic tables are unavailable. The pipeline did not produce a calculated JSON file that could be passed to the canonical renderer, so no wave, tide, wind, temperature, or score values are reproduced by hand.
+Score is alone / with instructor; bold marks the day's best. Face is the estimated breaking face from groundswell. Tide in ft, ↗ rising, ↘ falling; fat means a soft high-tide wave that is harder to catch. Wind in mph: ↑ offshore, ⟷ cross-shore, ↓ onshore. ⚠️ cost one point, ❌ two or more; ▲▼ mark a fast change before the next reading.
 
-#### Capitola — Friday, October 2
+**Capitola — Fri Oct 2:** ❌ all day, alert
 
-No table: the NWS shoreline forecast has blank directions at the 7 AM and 9 AM calm samples, so the canonical calculation rejected the day.
+#### Cowell — Fri Oct 2
 
-#### Cowell — Friday, October 2
+↓ SSW groundswell 1.6 ft @ 17 s, angled · 63–79°F, partly sunny → mostly sunny · sun 7:03 AM–6:51 PM
 
-No table: the NWS shoreline forecast has blank directions at the 7 AM and 9 AM calm samples, so the canonical calculation rejected the day.
+| Time | Face | Tide | Wind | Score |
+|---|---|---|---|---|
+| 9 AM | 2.4 ft | 3.3 ↗ | 1 N ↑ · partly sunny⚠️ | 7.5 / 9 |
+| 11 AM | 2.2 ft | 4.2 ↗ fat⚠️ | 1 S ↓⚠️ · partly sunny⚠️ | 7.5 / 9 |
+| 1 PM | 2.0 ft | 5.13 ↗ fat near cutoff❌ | 1 S ↓⚠️ · partly sunny⚠️ | 6 / 7.5 |
+| 3 PM | 2.1 ft | 5.46 ↘ fat near cutoff❌ | 3 W ⟷⚠️ | 6 / 7.5 |
+| 5 PM | 2.3 ft | 4.4 ↘ fat⚠️ | calm | **8 / 9.5** |
 
-#### Capitola — Saturday, October 3
+**Capitola — Sat Oct 3:** ❌ all day, alert
 
-No table: the source bundle contains unsupported blank NWS wind directions, so the canonical calculation rejected the day even though Capitola's daylight sample directions are populated.
+#### Cowell — Sat Oct 3
 
-#### Cowell — Saturday, October 3
+↓ SSW groundswell 1.7 ft @ 15 s, angled · 65–83°F, partly sunny → mostly sunny · sun 7:04 AM–6:50 PM
 
-No table: the NWS shoreline forecast has blank directions at the 7 AM and 9 AM calm samples, so the canonical calculation rejected the day.
+| Time | Face | Tide | Wind | Score |
+|---|---|---|---|---|
+| 9 AM | 2.5 ft | 3.4 ↘ | calm · partly sunny⚠️ | **7.5 / 9** |
+| 11 AM | 2.4 ft | 3.6 ↗ fat⚠️ | 1 W ⟷⚠️ | 7 / 8.5 |
+| 1 PM | 2.4 ft | 4.4 ↗ fat⚠️ | 1 W ⟷⚠️ | 7 / 8.5 |
+| 3 PM | 2.2 ft | 5.2 ↗ fat❌ | 5 WSW ⟷⚠️ | 5.5 / 7 |
+| 5 PM | 2.1 ft | 5.1 ↘ fat❌ | 2 W ⟷⚠️ | 6 / 7.5 |
 
-#### Capitola — Sunday, October 4
+**Capitola — Sun Oct 4:** ❌ all day, alert
 
-No table: the NWS shoreline forecast has blank directions at the 7 AM and 9 AM calm samples, so the canonical calculation rejected the day.
+#### Cowell — Sun Oct 4
 
-#### Cowell — Sunday, October 4
+↓ SSW groundswell 1.4–1.5 ft @ 13–15 s, angled · 65–80°F, mostly sunny → sunny · sun 7:05 AM–6:48 PM
 
-No table: the NWS shoreline forecast has blank directions at the 7 AM and 9 AM calm samples, so the canonical calculation rejected the day.
+| Time | Face | Tide | Wind | Score |
+|---|---|---|---|---|
+| 9 AM | 2.1 ft | 3.7 ↘ fat⚠️ | calm | 8.5 / 10 |
+| 11 AM | 2.2 ft | 3.2 ↘ | 2 W ⟷⚠️ | **9 / 10** |
+| 1 PM | 2.1 ft | 3.5 ↗ | 2 W ⟷⚠️ | **9 / 10** |
+| 3 PM | 1.9 ft | 4.5 ↗ fat⚠️ | 5 W ⟷⚠️ | 7 / 8.5 |
+| 5 PM | 1.8 ft | 5.1 ↗❌ | 3 W ⟷⚠️ | ❌ not breaking |
 
-#### Capitola — Monday, October 5
+**Capitola — Mon Oct 5:** ❌ all day, alert
 
-No table: CDIP `SC111` forecast coverage ends at 2 PM PDT, before the required 3 PM and 5 PM samples.
+#### Cowell — Mon Oct 5
 
-#### Cowell — Monday, October 5
+↓ SSW groundswell 1.5–1.6 ft @ 14 s, straight in · 64–80°F, sunny · sun 7:06 AM–6:47 PM
 
-No table: CDIP `SC149` forecast coverage ends at 2 PM PDT, before the required 3 PM and 5 PM samples.
+| Time | Face | Tide | Wind | Score |
+|---|---|---|---|---|
+| 9 AM | 2.1 ft | 4.0 ↘ fat⚠️ | calm | **9 / 10** |
+| 11 AM | 2.3 ft | 3.2 ↘ | 2 W ⟷⚠️ | 8.5 / 10 |
+| 1 PM | 2.4 ft | 2.7 ↗ | 2 W ⟷⚠️ | 8.5 / 10 |
+| 3 PM | 2.4 ft | 3.4 ↗ | 6 W ⟷⚠️ | 8 / 9.5 |
+| 5 PM | 2.1 ft | 4.6 ↗ fat❌ | 3 W ⟷⚠️ | 6 / 7.5 |
 
 ## Skydiving
 
 ### Bottom Line
 
-Sunday and Monday at 9 AM are the calmest slots; all four days have ✅ windows.
+Every sample on all four days is ✅; Sunday at 9 AM (calm) and Monday at 9 AM (1 mph) are the smoothest slots.
 
 ### Daily Tables
 
-Spread means gust minus sustained.
+Wind and gusts in mph; the arrow points where the wind comes from, roughly your heading on final. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
 
-#### Friday, October 2 — sunrise 7:01 AM, sunset 6:48 PM
+**Fri Oct 2:** ✅ all day · wind ≤ 5 from NNW/NNE/N, gusts ≤ 13 · dry · 70–90°F · sun 7:01 AM–6:49 PM
 
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ↑ 0 mph N | 71 °F | 0 mm | none — gust 5 mph, spread 5 mph | ✅ |
-| 11 AM | ↑ 2 mph N | 80 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 1 PM | ↑ 2 mph N | 87 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 3 PM | ↑ 5 mph N | 91 °F | 0 mm | none — gust 13 mph, spread 8 mph | ✅ |
-| 5 PM | ↖ 5 mph NNW | 91 °F | 0 mm | none — gust 12 mph, spread 7 mph | ✅ |
+**Sat Oct 3:** ✅ all day · wind ≤ 5 from N/NNW, gusts ≤ 13 · dry · 73–94°F · sun 7:02 AM–6:47 PM
 
-#### Saturday, October 3 — sunrise 7:02 AM, sunset 6:47 PM
+#### Sun Oct 4
 
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ↑ 0 mph N | 73 °F | 0 mm | none — gust 5 mph, spread 5 mph | ✅ |
-| 11 AM | ↑ 2 mph NNE | 84 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 1 PM | ↑ 2 mph NNE | 90 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 3 PM | ↑ 5 mph N | 93 °F | 0 mm | none — gust 13 mph, spread 8 mph | ✅ |
-| 5 PM | ↖ 5 mph NNW | 92 °F | 0 mm | none — gust 12 mph, spread 7 mph | ✅ |
+sun 7:03 AM–6:46 PM · 76–95°F · dry · student limit 14 mph
 
-#### Sunday, October 4 — sunrise 7:03 AM, sunset 6:45 PM
+| Time | Wind | Gust | Go |
+|---|---|---|---|
+| 9 AM | calm | 5 | ✅ |
+| 11 AM | ↑ 2 N | 8 | ✅ |
+| 1 PM | ↑ 2 N | 8 | ✅ |
+| 3 PM | ↑ 5 N | 13 | ✅ |
+| 5 PM | ↑ 6 NNW | 15 (+9)⚠️ | ✅ |
 
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ↑ 0 mph N | 74 °F | 0 mm | none — gust 3 mph, spread 3 mph | ✅ |
-| 11 AM | ↑ 2 mph NNE | 84 °F | 0 mm | none — gust 8 mph, spread 6 mph | ✅ |
-| 1 PM | ↑ 2 mph NNE | 91 °F | 0 mm | none — gust 8 mph, spread 6 mph | ✅ |
-| 3 PM | ↑ 3 mph N | 94 °F | 0 mm | gusty — gust 13 mph, spread 10 mph | ✅ |
-| 5 PM | ↖ 6 mph NNW | 93 °F | 0 mm | none — gust 14 mph, spread 8 mph | ✅ |
+#### Mon Oct 5
 
-#### Monday, October 5 — sunrise 7:04 AM, sunset 6:44 PM
+sun 7:04 AM–6:44 PM · 75–94°F · dry · student limit 14 mph
 
-| Time | Wind | Temp | Rain | Air | Flyable |
-|---|---|---|---|---|---|
-| 9 AM | ↑ 0 mph N | 74 °F | 0 mm | none — gust 3 mph, spread 3 mph | ✅ |
-| 11 AM | ↑ 2 mph N | 84 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 1 PM | ↑ 2 mph N | 90 °F | 0 mm | none — gust 9 mph, spread 7 mph | ✅ |
-| 3 PM | ↖ 5 mph NNW | 93 °F | 0 mm | none — gust 13 mph, spread 8 mph | ✅ |
-| 5 PM | ↖ 7 mph NNW | 92 °F | 0 mm | none — gust 15 mph, spread 8 mph | ✅ |
+| Time | Wind | Gust | Go |
+|---|---|---|---|
+| 9 AM | ← 1 W | 5 | ✅ |
+| 11 AM | ↑ 2 N | 9 | ✅ |
+| 1 PM | ↑ 2 N | 9 | ✅ |
+| 3 PM | ↑ 7 NNW | 15 | ✅ |
+| 5 PM | ↑ 7 NNW | 16 (+9)⚠️ | ✅ |
 
 ## Safety
 
-The fresh [NWS Capitola](https://api.weather.gov/alerts/active?point=36.9735%2C-121.9530) and [Cowell](https://api.weather.gov/alerts/active?point=36.9616%2C-122.0243) feeds contain a **Coastal Flood Advisory through Thursday, October 1 at 5 PM PDT**, before this forecast window. It warns of minor coastal flooding around high tides and may affect low-lying access or roads. Because an advisory can be extended, refresh it before travel.
-
-[Santa Cruz County water quality](https://www.scceh.com/NewHome/Programs/WaterResources/SurfaceWaterStewardship/WaterQualityMonitoring/BeachWaterBodyAdvisories.aspx), updated September 22 from September 21 sampling, reports no active bacterial beach alerts but retains an elevated domoic-acid caution from Cowell Beach through Rio del Mar. The county says the associated organism may irritate skin, eyes, mouth, and throat even when no red water is visible, and that ingestion is the principal toxin exposure route. This is a caution, not a closure or a clean-water guarantee. Avoid swallowing water, follow new on-site instructions, and stay clear of the permanently posted Neary Lagoon outfall at Cowell and Soquel Creek mouth at Capitola. The county's precautionary advisory applies for 72 hours after rain.
-
-No same-day camera, lifeguard, or instructor validation was obtained. Do not treat the unavailable scores as permission to enter; check actual breaking size, access, water quality, and official postings before a session.
+- **Capitola bacterial beach alert:** [Santa Cruz County water quality](https://www.scceh.com/NewHome/Programs/WaterResources/SurfaceWaterStewardship/WaterQualityMonitoring/BeachWaterBodyAdvisories.aspx), updated September 29 from September 28 testing, lists an active alert at **Capitola Beach at Soquel Creek**. Stay out of the water at Capitola until the county lifts it.
+- **Domoic acid at Cowell:** the county's caution (measured September 21) covers Cowell Beach through Rio del Mar. It is linked to *Pseudo-nitzschia*, which can irritate skin, eyes, mouth and throat even without a visible red tide. Swallowing water is the main exposure route. This is a caution, not a closure. Avoid swallowing water and rinse off afterwards.
+- **Permanent postings:** stay clear of the Neary Lagoon outfall at Cowell and the Soquel Creek mouth at Capitola. The county's precautionary advisory applies for 72 hours after any rain.
+- **NWS alerts:** a Coastal Flood Advisory covers both points until **Thursday, October 1 at 5 PM PDT**, before this window. Check it is not extended.
+- **Freshness:** sources were fetched Wednesday, September 30 at 9:26 PM PDT. No camera, lifeguard or instructor check was done yet.
 
 ## Sources
 
-- Surf: `Capitola Cowell Surf Forecast 20261002 - 20261005 Summary.md` — generated September 29, 2026.
-- Skydiving: `Skydive California Forecast 20261002 - 20261005 Summary.md` — generated September 29, 2026.
+- Surf: `Capitola Cowell Surf Forecast 20261002 - 20261005 Summary (2).md` — generated September 30, 2026.
+- Skydiving: `Skydive California Forecast 20261002 - 20261005 Summary (2).md` — generated September 30, 2026.
