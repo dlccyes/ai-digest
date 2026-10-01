@@ -29,63 +29,63 @@ tags: [forecast, surfing, skydiving]
 
 ### Daily Tables
 
-Score is alone / with instructor; bold marks the day's best. Face is the estimated breaking face from groundswell. Tide in ft, ↗ rising, ↘ falling; fat means a soft high-tide wave that is harder to catch. Wind in mph: ↑ offshore, ⟷ cross-shore, ↓ onshore. ⚠️ cost one point, ❌ two or more; ▲▼ mark a fast change before the next reading.
+Score is alone / with instructor; bold marks the day's best. Face is the estimated breaking face from groundswell. Tide in ft, ↗ rising, ↘ falling; fat means a soft high-tide wave that is harder to catch. Wind in mph: ↑ offshore, ⟷ cross-shore, ↓ onshore. Air is °F at the beach. ⚠️ cost one point, ❌ two or more; ▲▼ mark a fast change before the next reading.
 
 **Capitola — Fri Oct 2:** ❌ all day, alert
 
 #### Cowell — Fri Oct 2
 
-↓ SSW groundswell 1.6 ft @ 17 s, angled · 63–79°F, partly sunny → mostly sunny · sun 7:03 AM–6:51 PM
+↓ SSW groundswell 1.6 ft @ 17 s, angled · partly sunny → mostly sunny · sun 7:03 AM–6:51 PM
 
-| Time | Face | Tide | Wind | Score |
-|---|---|---|---|---|
-| 9 AM | 2.4 ft | 3.3 ↗ | 1 N ↑ · partly sunny⚠️ | 7.5 / 9 |
-| 11 AM | 2.2 ft | 4.2 ↗ fat⚠️ | 1 S ↓⚠️ · partly sunny⚠️ | 7.5 / 9 |
-| 1 PM | 2.0 ft | 5.13 ↗ fat near cutoff❌ | 1 S ↓⚠️ · partly sunny⚠️ | 6 / 7.5 |
-| 3 PM | 2.1 ft | 5.46 ↘ fat near cutoff❌ | 3 W ⟷⚠️ | 6 / 7.5 |
-| 5 PM | 2.3 ft | 4.4 ↘ fat⚠️ | calm | **8 / 9.5** |
+| Time | Face | Tide | Wind | Air | Score |
+|---|---|---|---|---|---|
+| 9 AM | 2.4 ft | 3.3 ↗ | 1 N ↑ · partly sunny⚠️ | 63° | 7.5 / 9 |
+| 11 AM | 2.2 ft | 4.2 ↗ fat⚠️ | 1 S ↓⚠️ · partly sunny⚠️ | 70° | 7.5 / 9 |
+| 1 PM | 2.0 ft | 5.13 ↗ fat near cutoff❌ | 1 S ↓⚠️ · partly sunny⚠️ | 76° | 6 / 7.5 |
+| 3 PM | 2.1 ft | 5.46 ↘ fat near cutoff❌ | 3 W ⟷⚠️ | 79° | 6 / 7.5 |
+| 5 PM | 2.3 ft | 4.4 ↘ fat⚠️ | calm | 77° | **8 / 9.5** |
 
 **Capitola — Sat Oct 3:** ❌ all day, alert
 
 #### Cowell — Sat Oct 3
 
-↓ SSW groundswell 1.7 ft @ 15 s, angled · 65–83°F, partly sunny → mostly sunny · sun 7:04 AM–6:50 PM
+↓ SSW groundswell 1.7 ft @ 15 s, angled · partly sunny → mostly sunny · sun 7:04 AM–6:50 PM
 
-| Time | Face | Tide | Wind | Score |
-|---|---|---|---|---|
-| 9 AM | 2.5 ft | 3.4 ↘ | calm · partly sunny⚠️ | **7.5 / 9** |
-| 11 AM | 2.4 ft | 3.6 ↗ fat⚠️ | 1 W ⟷⚠️ | 7 / 8.5 |
-| 1 PM | 2.4 ft | 4.4 ↗ fat⚠️ | 1 W ⟷⚠️ | 7 / 8.5 |
-| 3 PM | 2.2 ft | 5.2 ↗ fat❌ | 5 WSW ⟷⚠️ | 5.5 / 7 |
-| 5 PM | 2.1 ft | 5.1 ↘ fat❌ | 2 W ⟷⚠️ | 6 / 7.5 |
+| Time | Face | Tide | Wind | Air | Score |
+|---|---|---|---|---|---|
+| 9 AM | 2.5 ft | 3.4 ↘ | calm · partly sunny⚠️ | 65° | **7.5 / 9** |
+| 11 AM | 2.4 ft | 3.6 ↗ fat⚠️ | 1 W ⟷⚠️ | 73° | 7 / 8.5 |
+| 1 PM | 2.4 ft | 4.4 ↗ fat⚠️ | 1 W ⟷⚠️ | 80° | 7 / 8.5 |
+| 3 PM | 2.2 ft | 5.2 ↗ fat❌ | 5 WSW ⟷⚠️ | 83° | 5.5 / 7 |
+| 5 PM | 2.1 ft | 5.1 ↘ fat❌ | 2 W ⟷⚠️ | 76° | 6 / 7.5 |
 
 **Capitola — Sun Oct 4:** ❌ all day, alert
 
 #### Cowell — Sun Oct 4
 
-↓ SSW groundswell 1.4–1.5 ft @ 13–15 s, angled · 65–80°F, mostly sunny → sunny · sun 7:05 AM–6:48 PM
+↓ SSW groundswell 1.4–1.5 ft @ 13–15 s, angled · mostly sunny → sunny · sun 7:05 AM–6:48 PM
 
-| Time | Face | Tide | Wind | Score |
-|---|---|---|---|---|
-| 9 AM | 2.1 ft | 3.7 ↘ fat⚠️ | calm | 8.5 / 10 |
-| 11 AM | 2.2 ft | 3.2 ↘ | 2 W ⟷⚠️ | **9 / 10** |
-| 1 PM | 2.1 ft | 3.5 ↗ | 2 W ⟷⚠️ | **9 / 10** |
-| 3 PM | 1.9 ft | 4.5 ↗ fat⚠️ | 5 W ⟷⚠️ | 7 / 8.5 |
-| 5 PM | 1.8 ft | 5.1 ↗❌ | 3 W ⟷⚠️ | ❌ not breaking |
+| Time | Face | Tide | Wind | Air | Score |
+|---|---|---|---|---|---|
+| 9 AM | 2.1 ft | 3.7 ↘ fat⚠️ | calm | 65° | 8.5 / 10 |
+| 11 AM | 2.2 ft | 3.2 ↘ | 2 W ⟷⚠️ | 73° | **9 / 10** |
+| 1 PM | 2.1 ft | 3.5 ↗ | 2 W ⟷⚠️ | 78° | **9 / 10** |
+| 3 PM | 1.9 ft | 4.5 ↗ fat⚠️ | 5 W ⟷⚠️ | 80° | 7 / 8.5 |
+| 5 PM | 1.8 ft | 5.1 ↗❌ | 3 W ⟷⚠️ | 77° | ❌ not breaking |
 
 **Capitola — Mon Oct 5:** ❌ all day, alert
 
 #### Cowell — Mon Oct 5
 
-↓ SSW groundswell 1.5–1.6 ft @ 14 s, straight in · 64–80°F, sunny · sun 7:06 AM–6:47 PM
+↓ SSW groundswell 1.5–1.6 ft @ 14 s, straight in · sunny · sun 7:06 AM–6:47 PM
 
-| Time | Face | Tide | Wind | Score |
-|---|---|---|---|---|
-| 9 AM | 2.1 ft | 4.0 ↘ fat⚠️ | calm | **9 / 10** |
-| 11 AM | 2.3 ft | 3.2 ↘ | 2 W ⟷⚠️ | 8.5 / 10 |
-| 1 PM | 2.4 ft | 2.7 ↗ | 2 W ⟷⚠️ | 8.5 / 10 |
-| 3 PM | 2.4 ft | 3.4 ↗ | 6 W ⟷⚠️ | 8 / 9.5 |
-| 5 PM | 2.1 ft | 4.6 ↗ fat❌ | 3 W ⟷⚠️ | 6 / 7.5 |
+| Time | Face | Tide | Wind | Air | Score |
+|---|---|---|---|---|---|
+| 9 AM | 2.1 ft | 4.0 ↘ fat⚠️ | calm | 64° | **9 / 10** |
+| 11 AM | 2.3 ft | 3.2 ↘ | 2 W ⟷⚠️ | 72° | 8.5 / 10 |
+| 1 PM | 2.4 ft | 2.7 ↗ | 2 W ⟷⚠️ | 77° | 8.5 / 10 |
+| 3 PM | 2.4 ft | 3.4 ↗ | 6 W ⟷⚠️ | 80° | 8 / 9.5 |
+| 5 PM | 2.1 ft | 4.6 ↗ fat❌ | 3 W ⟷⚠️ | 78° | 6 / 7.5 |
 
 ## Skydiving
 
@@ -95,35 +95,35 @@ Every sample on all four days is ✅; Sunday at 9 AM (calm) and Monday at 9 AM (
 
 ### Daily Tables
 
-Wind and gusts in mph; the arrow points where the wind comes from, roughly your heading on final. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
+Wind and gusts in mph, air in °F; the arrow points where the wind comes from, roughly your heading on final. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
 
-**Fri Oct 2:** ✅ all day · wind ≤ 5 from NNW/NNE/N, gusts ≤ 13 · dry · 70–90°F · sun 7:01 AM–6:49 PM
+**Fri Oct 2:** ✅ all day · wind ≤ 5 from NNW/NNE/N, gusts ≤ 13 · dry · air 9 AM–5 PM: 70° 78° 85° 89° 90° · sun 7:01 AM–6:49 PM
 
-**Sat Oct 3:** ✅ all day · wind ≤ 5 from N/NNW, gusts ≤ 13 · dry · 73–94°F · sun 7:02 AM–6:47 PM
+**Sat Oct 3:** ✅ all day · wind ≤ 5 from N/NNW, gusts ≤ 13 · dry · air 9 AM–5 PM: 73° 83° 90° 94° 94° · sun 7:02 AM–6:47 PM
 
 #### Sun Oct 4
 
-sun 7:03 AM–6:46 PM · 76–95°F · dry · student limit 14 mph
+sun 7:03 AM–6:46 PM · dry · student limit 14 mph
 
-| Time | Wind | Gust | Go |
-|---|---|---|---|
-| 9 AM | calm | 5 | ✅ |
-| 11 AM | ↑ 2 N | 8 | ✅ |
-| 1 PM | ↑ 2 N | 8 | ✅ |
-| 3 PM | ↑ 5 N | 13 | ✅ |
-| 5 PM | ↑ 6 NNW | 15 (+9)⚠️ | ✅ |
+| Time | Wind | Gust | Air | Go |
+|---|---|---|---|---|
+| 9 AM | calm | 5 | 76° | ✅ |
+| 11 AM | ↑ 2 N | 8 | 87° | ✅ |
+| 1 PM | ↑ 2 N | 8 | 93° | ✅ |
+| 3 PM | ↑ 5 N | 13 | 95° | ✅ |
+| 5 PM | ↑ 6 NNW | 15 (+9)⚠️ | 94° | ✅ |
 
 #### Mon Oct 5
 
-sun 7:04 AM–6:44 PM · 75–94°F · dry · student limit 14 mph
+sun 7:04 AM–6:44 PM · dry · student limit 14 mph
 
-| Time | Wind | Gust | Go |
-|---|---|---|---|
-| 9 AM | ← 1 W | 5 | ✅ |
-| 11 AM | ↑ 2 N | 9 | ✅ |
-| 1 PM | ↑ 2 N | 9 | ✅ |
-| 3 PM | ↑ 7 NNW | 15 | ✅ |
-| 5 PM | ↑ 7 NNW | 16 (+9)⚠️ | ✅ |
+| Time | Wind | Gust | Air | Go |
+|---|---|---|---|---|
+| 9 AM | ← 1 W | 5 | 75° | ✅ |
+| 11 AM | ↑ 2 N | 9 | 86° | ✅ |
+| 1 PM | ↑ 2 N | 9 | 92° | ✅ |
+| 3 PM | ↑ 7 NNW | 15 | 94° | ✅ |
+| 5 PM | ↑ 7 NNW | 16 (+9)⚠️ | 93° | ✅ |
 
 ## Safety
 
@@ -131,7 +131,7 @@ sun 7:04 AM–6:44 PM · 75–94°F · dry · student limit 14 mph
 - **Domoic acid at Cowell:** the county's caution (measured September 21) covers Cowell Beach through Rio del Mar. It is linked to *Pseudo-nitzschia*, which can irritate skin, eyes, mouth and throat even without a visible red tide. Swallowing water is the main exposure route. This is a caution, not a closure. Avoid swallowing water and rinse off afterwards.
 - **Permanent postings:** stay clear of the Neary Lagoon outfall at Cowell and the Soquel Creek mouth at Capitola. The county's precautionary advisory applies for 72 hours after any rain.
 - **NWS alerts:** a Coastal Flood Advisory covers both points until **Thursday, October 1 at 5 PM PDT**, before this window. Check it is not extended.
-- **Freshness:** sources were fetched Wednesday, September 30 at 9:26 PM PDT. No camera, lifeguard or instructor check was done yet.
+- **Freshness:** sources were fetched Wednesday, September 30 at 9:52 PM PDT. No camera, lifeguard or instructor check was done yet.
 
 ## Sources
 
