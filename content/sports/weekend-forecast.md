@@ -95,7 +95,7 @@ Every sample on all four days is ✅; Sunday at 9 AM (calm) and Monday at 9 AM (
 
 ### Daily Tables
 
-Wind and gusts in mph, air in °F; the arrow points where the wind comes from, roughly your heading on final. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
+Wind and gusts in mph, air in °F, rain in mm; the arrow points where the wind comes from, roughly your heading on final. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
 
 **Fri Oct 2:** ✅ all day · wind ≤ 5 from NNW/NNE/N, gusts ≤ 13 · dry · air 9 AM–5 PM: 70° 78° 85° 89° 90° · sun 7:01 AM–6:49 PM
 
@@ -103,27 +103,27 @@ Wind and gusts in mph, air in °F; the arrow points where the wind comes from, r
 
 #### Sun Oct 4
 
-sun 7:03 AM–6:46 PM · dry · student limit 14 mph
+sun 7:03 AM–6:46 PM · student limit 14 mph
 
-| Time | Wind | Gust | Air | Go |
-|---|---|---|---|---|
-| 9 AM | calm | 5 | 76° | ✅ |
-| 11 AM | ↑ 2 N | 8 | 87° | ✅ |
-| 1 PM | ↑ 2 N | 8 | 93° | ✅ |
-| 3 PM | ↑ 5 N | 13 | 95° | ✅ |
-| 5 PM | ↑ 6 NNW | 15 (+9)⚠️ | 94° | ✅ |
+| Time | Wind | Gust | Air | Rain | Go |
+|---|---|---|---|---|---|
+| 9 AM | calm | 5 | 76° | 0 | ✅ |
+| 11 AM | ↑ 2 N | 8 | 87° | 0 | ✅ |
+| 1 PM | ↑ 2 N | 8 | 93° | 0 | ✅ |
+| 3 PM | ↑ 5 N | 13 | 95° | 0 | ✅ |
+| 5 PM | ↑ 6 NNW | 15 (+9)⚠️ | 94° | 0 | ✅ |
 
 #### Mon Oct 5
 
-sun 7:04 AM–6:44 PM · dry · student limit 14 mph
+sun 7:04 AM–6:44 PM · student limit 14 mph
 
-| Time | Wind | Gust | Air | Go |
-|---|---|---|---|---|
-| 9 AM | ← 1 W | 5 | 75° | ✅ |
-| 11 AM | ↑ 2 N | 9 | 86° | ✅ |
-| 1 PM | ↑ 2 N | 9 | 92° | ✅ |
-| 3 PM | ↑ 7 NNW | 15 | 94° | ✅ |
-| 5 PM | ↑ 7 NNW | 16 (+9)⚠️ | 93° | ✅ |
+| Time | Wind | Gust | Air | Rain | Go |
+|---|---|---|---|---|---|
+| 9 AM | ← 1 W | 5 | 75° | 0 | ✅ |
+| 11 AM | ↑ 2 N | 9 | 86° | 0 | ✅ |
+| 1 PM | ↑ 2 N | 9 | 92° | 0 | ✅ |
+| 3 PM | ↑ 7 NNW | 15 | 94° | 0 | ✅ |
+| 5 PM | ↑ 7 NNW | 16 (+9)⚠️ | 93° | 0 | ✅ |
 
 ## Safety
 
