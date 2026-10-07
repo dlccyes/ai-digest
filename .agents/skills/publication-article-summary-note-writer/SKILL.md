@@ -12,7 +12,7 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 ## Workflow
 
 1. Resolve the caller inputs and the issue naming rule.
-2. Use [$resolve-codex-session-attribution](/Users/dlcc/.codex/skills/resolve-codex-session-attribution/SKILL.md) to resolve the generator label.
+2. Use [$resolve-codex-session-attribution](/Users/dlcc/github/agens/neocortex/skills/resolve-codex-session-attribution/SKILL.md) to resolve the generator label.
 3. Find the newest issue PDF in the source folder.
 4. Inspect the PDF table of contents or article headings.
 5. Choose the best article that is not already summarized in the output folder.
