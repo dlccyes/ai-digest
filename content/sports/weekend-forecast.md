@@ -1,179 +1,130 @@
 ---
 title: Weekend Forecast
 url: /forecast/
-date: 2026-10-06
+date: 2026-10-13
 tags: [forecast, surfing, skydiving]
 ---
 
-**Best surf:** Cowell, Sunday, October 11 at 1 PM — 6 alone / 6.5 with instructor, the best available reading, though still below the independent worth-the-drive threshold. **Best jump:** Skydive California, Friday, October 9 at 9 AM — 2 mph wind with 8 mph gusts, the earliest of two tied smoothest slots. All times PDT.
+**Best surf:** Capitola, Friday, October 16 at 9 AM — 9 alone / 10 with instructor, with a clean 2.6 ft face, long runway, and light offshore wind. **Best jump:** Skydive California, Friday morning — the smoothest window, with 1–3 mph wind, gusts no higher than 9 mph, and dry conditions. All times PDT.
 
 ## Summary Calendar
 
-| | Friday, October 9 | Saturday, October 10 | Sunday, October 11 | Monday, October 12 |
+| | Friday, October 16 | Saturday, October 17 | Sunday, October 18 | Monday, October 19 |
 |---|---|---|---|---|
-| Morning | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️✅ | 🏄❌ ✈️✅ |
-| Afternoon | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️✅ | 🏄⚠️ ✈️✅ | 🏄❌ ✈️✅ |
+| Morning | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄❌ ✈️✅ |
+| Afternoon | 🏄✅ ✈️✅ | 🏄✅ ✈️✅ | 🏄⚠️ ✈️✅ | 🏄❌ ✈️✅ |
 
 ## Surfing
 
 ### Bottom Line
 
-- **Friday 9 AM, Capitola:** 5 alone / 6 with instructor. The 3.5 ft face is above the current 2.5 ft demonstrated limit, but the light wind and adequate break runway avoid a gate.
-- **Saturday 1 PM, Capitola:** 5 alone / 5.5 with instructor. The tide has fallen enough for a long runway, while the 3.7 ft face remains the main compromise.
-- **Sunday 1 PM, Cowell:** 6 alone / 6.5 with instructor, the best reading in the available forecast. Light offshore WNW wind helps, but the estimated 3.8 ft face is still large for the current profile.
+- **Capitola Friday at 9 AM — 9 / 10:** 2.6 ft face, 3.6 ft incoming tide, 43 ft of runway, light offshore wind, and 63°F sunshine.
+- **Capitola Friday at 5 PM — 8.5 / 10:** the falling tide restores 52 ft of runway after the 1–3 PM shorebreak gate; wind is light cross-shore.
+- **Capitola Saturday at 9 AM — 8.5 / 10:** 2.9 ft face, 3.6 ft incoming tide, 61 ft of runway, and light offshore wind. The 18-second swell is powerful despite the friendly score.
 
-No Friday-Sunday reading reaches the 7-point worth-the-drive threshold for an independent session. Monday cannot be scored yet; neither spot is known to be gated all day.
+Cowell is gated all day Friday–Sunday by the county's active **Cowell's Beach at Stairs** alert. Monday remains unscored until the forecast horizon fills. Buoy 46236 measured water at **62.2°F / 16.8°C** at **6:30 AM PDT Tuesday, October 13**; this slow-changing reading stands for the window, and the latest solo session still supports wearing a full wetsuit.
 
 ### Daily Tables
 
 Score is alone / with instructor; bold marks the day's best. % clean is the share of wave energy in the groundswell; the rest is shorter-period background that makes sets uneven (shown, not scored). Face is the estimated breaking face from groundswell. Tide in ft, ↗ rising, ↘ falling. Break is how far outside the foot of the steep beach face the wave breaks, the runway before it dumps; minus means it breaks on the face itself (shorebreak). Wind in mph: ↑ offshore, ⟷ cross-shore, ↓ onshore. Weather is °F at the beach with the sky: ☀️ sunny, 🌤️ mostly sunny, ⛅ partly sunny, 🌥️ mostly cloudy, ☁️ cloudy, 🌫️ fog, 🌧️ rain. ⚠️ cost one point, ❌ two or more; ▲▼ mark a fast change before the next reading.
 
-#### Capitola — Fri Oct 9
+#### Capitola — Fri Oct 16
 
-↓ SSW groundswell 2.0–2.1 ft @ 15 s, straight in, 82–83% clean · sun 7:09 AM–6:41 PM
-
-| Time | Face | Tide | Break | Wind | Weather | Score |
-|---|---|---|---|---|---|---|
-| 9 AM | 3.5 ft big⚠️ | 5.0 ↗ | +30 ft | 1 S ↓⚠️ | 62° 🌤️ | **5 / 6** |
-| 11 AM | 3.5 ft big⚠️ | 5.0 ↘ ▼ | +29 ft | 2 SW ↓⚠️ | 68° ☀️ | **5 / 6** |
-| 1 PM | 3.6 ft big⚠️ | 3.2 ↘ ▼ | +126 ft | 2 SW ↓⚠️ | 72° ☀️ | **5 / 6** |
-| 3 PM | 3.6 ft big⚠️ | 1.1 ↘ | +232 ft | 5 WSW ⟷⚠️ | 73° ☀️ | **5 / 6** |
-| 5 PM | 3.6 ft big⚠️ | 0.6 ↗ | +233 ft | 3 WSW ⟷⚠️ | 70° ☀️ | **5 / 5.5** |
-
-#### Cowell — Fri Oct 9
-
-↓ S groundswell 2.6–2.7 ft @ 15 s, straight in, 76–81% clean · sun 7:09 AM–6:41 PM
+↓ SSW groundswell 1.4–1.5 ft @ 13 s, straight in, 90–91% clean · sun 7:16 AM–6:31 PM
 
 | Time | Face | Tide | Break | Wind | Weather | Score |
 |---|---|---|---|---|---|---|
-| 9 AM | 4.3 ft too big❌ | 5.0 ↗ | +80 ft | calm | 62° 🌤️ | **4 / 4.5** |
-| 11 AM | 4.3 ft too big❌ | 5.0 ↘ ▼ | +79 ft | 2 SW ↓⚠️ | 69° 🌤️ | 3 / 3.5 |
-| 1 PM | 4.3 ft too big❌ | 3.2 ↘ ▼ | +173 ft | 2 SW ↓⚠️ | 74° 🌤️ | 3 / 3.5 |
-| 3 PM | 4.4 ft too big❌ | 1.1 ↘ | +280 ft | 5 WSW ⟷⚠️ | 74° ☀️ | 3 / 3.5 |
-| 5 PM | 4.4 ft too big❌ | 0.6 ↗ | +283 ft | 2 W ⟷⚠️ | 71° ☀️ | 2.5 / 3 |
+| 9 AM | 2.6 ft | 3.6 ↗ | +43 ft | 3 NE ↑ | 63° ☀️ | **9 / 10** |
+| 11 AM | 2.6 ft | 4.2 ↗ | +16 ft⚠️ | 1 E ⟷⚠️ | 75° ☀️ | 7 / 8.5 |
+| 1 PM | 2.6 ft | 4.6 ↗ | −2 ft❌ | 1 E ⟷⚠️ | 83° ☀️ | ❌ shorebreak |
+| 3 PM | 2.6 ft | 4.5 ↘ | +0 ft❌ | 3 WSW ⟷⚠️ | 84° ☀️ | ❌ shorebreak |
+| 5 PM | 2.6 ft | 3.3 ↘ | +52 ft | 2 W ⟷⚠️ | 75° ☀️ | 8.5 / 10 |
 
-#### Capitola — Sat Oct 10
+**Cowell — Fri Oct 16:** ❌ all day, alert
 
-↓ SSW groundswell 2.2 ft @ 14 s, straight in, 69–76% clean · sun 7:10 AM–6:40 PM
+#### Capitola — Sat Oct 17
 
-| Time | Face | Tide | Break | Wind | Weather | Score |
-|---|---|---|---|---|---|---|
-| 9 AM | 3.7 ft big⚠️ | 4.9 ↗ | +51 ft | 2 W ⟷⚠️ | 59° ⛅⚠️ | 4 / 4.5 |
-| 11 AM | 3.7 ft big⚠️ | 5.4 ↘ ▼ | +24 ft⚠️ | 6 WSW ⟷⚠️ | 64° 🌤️ | 4 / 4.5 |
-| 1 PM | 3.7 ft big⚠️ | 3.8 ↘ ▼ | +100 ft | 6 WSW ⟷⚠️ | 67° 🌤️ | **5 / 5.5** |
-| 3 PM | 3.7 ft big⚠️ | 1.5 ↘ | +219 ft | 8 W ⟷❌ | 67° ☀️ | 4 / 4.5 |
-| 5 PM | 3.7 ft big⚠️ | 0.2 ↘ | +237 ft | 7 W ⟷⚠️ | 65° ☀️ | **5 / 5.5** |
-
-#### Cowell — Sat Oct 10
-
-↓ SSW groundswell 2.3–2.5 ft @ 15–18 s, straight in, 67–70% clean · sun 7:10 AM–6:40 PM
+↓ SSW groundswell 1.6 ft @ 18 s, straight in, 87–90% clean · sun 7:17 AM–6:30 PM
 
 | Time | Face | Tide | Break | Wind | Weather | Score |
 |---|---|---|---|---|---|---|
-| 9 AM | 4.1 ft big⚠️ | 4.9 ↗ | +73 ft | 2 WNW ↑ | 60° ⛅⚠️ | **4.5 / 5** |
-| 11 AM | 4.1 ft big⚠️ | 5.4 ↘ ▼ | +45 ft | 6 W ⟷⚠️ | 65° 🌤️ | **4.5 / 5** |
-| 1 PM | 4.0 ft big⚠️ | 3.8 ↘ ▼ | +117 ft | 6 W ⟷⚠️ | 68° 🌤️ | **4.5 / 5** |
-| 3 PM | 3.9 ft big⚠️ | 1.5 ↘ | +232 ft | 12 W ⟷❌ | 68° ☀️ | 3.5 / 4 |
-| 5 PM | 3.9 ft big⚠️ | 0.2 ↘ | +247 ft | 10 W ⟷❌ | 66° ☀️ | 3.5 / 4 |
+| 9 AM | 2.9 ft | 3.6 ↗ | +61 ft | 1 NE ↑ | 64° ☀️ | **8.5 / 10** |
+| 11 AM | 2.9 ft | 3.8 ↗ | +51 ft | 1 W ⟷⚠️ | 73° ☀️ | 7.5 / 9 |
+| 1 PM | 2.9 ft | 4.2 ↗ | +30 ft | 1 W ⟷⚠️ | 78° ☀️ | 7.5 / 9 |
+| 3 PM | 2.9 ft | 4.4 ↘ | +21 ft⚠️ | 5 W ⟷⚠️ | 78° ☀️ | 6.5 / 8 |
+| 5 PM | 2.9 ft | 3.8 ↘ | +49 ft | 3 W ⟷⚠️ | 72° ☀️ | 7.5 / 9 |
 
-#### Capitola — Sun Oct 11
+**Cowell — Sat Oct 17:** ❌ all day, alert
 
-↓ SSW groundswell 2.3–2.4 ft @ 13–22 s, straight in, 69–73% clean · sun 7:11 AM–6:38 PM
+#### Capitola — Sun Oct 18
 
-| Time | Face | Tide | Break | Wind | Weather | Score |
-|---|---|---|---|---|---|---|
-| 9 AM | 3.9 ft big⚠️ | 4.7 ↗ | +72 ft | 3 WNW ⟷⚠️ | 56° 🌤️⚠️ | 3.5 / 4 |
-| 11 AM | 3.8 ft big⚠️ | 5.5 ↘ | +22 ft⚠️ | 3 W ⟷⚠️ | 61° ☀️ | 3.5 / 4 |
-| 1 PM | 4.1 ft big⚠️ | 4.4 ↘ ▼ | +96 ft | 3 W ⟷⚠️ | 64° ☀️ | 4 / 4.5 |
-| 3 PM | 4.1 ft big⚠️ | 2.1 ↘ ▼ | +215 ft | 6 W ⟷⚠️ | 66° ☀️ | 4 / 4.5 |
-| 5 PM | 4.0 ft big⚠️ | 0.3 ↘ | +254 ft | 5 W ⟷⚠️ | 64° ☀️ | **4.5 / 5** |
-
-#### Cowell — Sun Oct 11
-
-↓ SSW groundswell 2.1–2.3 ft @ 17 s, angled, 69–70% clean · sun 7:11 AM–6:38 PM
+↓ SSW groundswell 1.8 ft @ 13–14 s, straight in, 83–85% clean · sun 7:18 AM–6:29 PM
 
 | Time | Face | Tide | Break | Wind | Weather | Score |
 |---|---|---|---|---|---|---|
-| 9 AM | 3.9 ft big⚠️ | 4.7 ↗ | +70 ft | 2 NW ↑ | 57° 🌤️⚠️ | 4.5 / 5 |
-| 11 AM | 3.8 ft big⚠️ | 5.5 ↘ | +22 ft⚠️ | 5 WNW ↑ | 62° 🌤️ | 4.5 / 5 |
-| 1 PM | 3.8 ft big⚠️ | 4.4 ↘ ▼ | +73 ft | 5 WNW ↑ | 66° 🌤️ | **6 / 6.5** |
-| 3 PM | 3.7 ft big⚠️ | 2.1 ↘ ▼ | +190 ft | 8 W ⟷❌ | 67° ☀️ | 4 / 4.5 |
-| 5 PM | 3.7 ft big⚠️ | 0.3 ↘ | +235 ft | 6 WNW ↑⚠️ | 65° ☀️ | 5 / 5.5 |
+| 9 AM | 3.1 ft big⚠️ | 3.6 ↘ | +72 ft | 1 NNE ↑ | 59° ☀️ | **7 / 8.5** |
+| 11 AM | 3.1 ft big⚠️ | 3.5 ↗ | +78 ft | 2 WSW ⟷⚠️ | 66° ☀️ | 6 / 7.5 |
+| 1 PM | 3.1 ft big⚠️ | 3.7 ↗ | +65 ft | 2 WSW ⟷⚠️ | 72° ☀️ | 6 / 7.5 |
+| 3 PM | 3.1 ft big⚠️ | 4.1 ↗ | +47 ft | 5 W ⟷⚠️ | 73° ☀️ | 6 / 7.5 |
+| 5 PM | 3.1 ft big⚠️ | 4.2 ↘ | +45 ft | 5 WNW ⟷⚠️ | 69° ☀️ | 6 / 7.5 |
 
-#### Capitola — Mon Oct 12
+**Cowell — Sun Oct 18:** ❌ all day, alert
 
-❓ Forecast unavailable: CDIP SC111 coverage ends at 2 PM, before the required 3 PM and 5 PM samples.
+#### Capitola — Mon Oct 19
 
-#### Cowell — Mon Oct 12
+❓ The CDIP forecast does not yet cover the required afternoon samples, so no score is issued.
 
-❓ Forecast unavailable: CDIP SC149 coverage ends at 2 PM, before the required 3 PM and 5 PM samples.
+#### Cowell — Mon Oct 19
+
+❓ The CDIP forecast does not yet cover the required afternoon samples; the current county alert also requires a fresh check.
 
 ## Skydiving
 
 ### Bottom Line
 
-Friday and Saturday at 9 AM are the smoothest slots; every half-day has a student-Go window, though Saturday becomes marginal at 5 PM and gustiness builds most afternoons.
+Friday and Saturday are the smoothest choices; Sunday is best before 3 PM, and Monday is best before the rough, student-marginal 3–5 PM window. Every day has at least one ✅ slot.
 
 ### Daily Tables
 
 Wind and gusts in mph, rain in mm; the arrow points where the wind comes from, roughly your heading on final. Weather is air °F with the sky: ☀️ sunny, 🌤️ mostly sunny, ⛅ partly sunny, 🌥️ mostly cloudy, ☁️ cloudy, 🌧️ rain. Go: ✅ wind 11 or less, ⚠️ 12 up to the limit, ❌ over the limit or any rain. Gusts never change Go: ⚠️ gusty means gusts 17+ or 9+ above the wind, ❌ rough means 25+ or 15+ above; (+N) is that gap when it reaches 9.
 
-#### Fri Oct 9
+**Fri Oct 16:** ✅ all day · wind ≤ 3 from WSW/NE/N, gusts ≤ 9 · dry · weather 9 AM–5 PM: 64° 74° 82° 86° 86° ☀️ · sun 7:14 AM–6:28 PM
 
-sun 7:08 AM–6:38 PM · student limit 14 mph
+**Sat Oct 17:** ✅ all day · wind ≤ 5 from NNE/N/NNW, gusts ≤ 13 · dry · weather 9 AM–5 PM: 67° 78° 84° 86° 86° ☀️ · sun 7:15 AM–6:27 PM
 
-| Time | Wind | Gust | Weather | Rain | Go |
-|---|---|---|---|---|---|
-| 9 AM | ← 2 W | 8 | 73° ☀️ | 0 | ✅ |
-| 11 AM | ↑ 3 NNW | 12 (+9)⚠️ | 83° ☀️ | 0 | ✅ |
-| 1 PM | ↑ 3 NNW | 12 (+9)⚠️ | 89° ☀️ | 0 | ✅ |
-| 3 PM | ↖ 7 NW | 16 (+9)⚠️ | 92° ☀️ | 0 | ✅ |
-| 5 PM | ↖ 8 WNW | 17 (+9)⚠️ | 90° ☀️ | 0 | ✅ |
+#### Sun Oct 18
 
-#### Sat Oct 10
-
-sun 7:08 AM–6:37 PM · student limit 14 mph
+sun 7:16 AM–6:26 PM · student limit 14 mph
 
 | Time | Wind | Gust | Weather | Rain | Go |
 |---|---|---|---|---|---|
-| 9 AM | ↙ 2 WSW | 9 | 66° ☀️ | 0 | ✅ |
-| 11 AM | ↖ 3 WNW | 14 (+11)⚠️ | 75° 🌤️ | 0 | ✅ |
-| 1 PM | ↖ 3 WNW | 14 (+11)⚠️ | 79° 🌤️ | 0 | ✅ |
-| 3 PM | ↖ 10 WNW | 22 (+12)⚠️ | 80° 🌤️ | 0 | ✅ |
-| 5 PM | ← 12 W | 24 (+12)⚠️ | 78° ☀️ | 0 | ⚠️ |
+| 9 AM | ← 1 W | 5 | 65° ☀️ | 0 | ✅ |
+| 11 AM | ↑ 1 N | 8 | 75° ☀️ | 0 | ✅ |
+| 1 PM | ↑ 1 N | 8 | 81° ☀️ | 0 | ✅ |
+| 3 PM | ↖ 5 NW | 14 (+9)⚠️ | 84° ☀️ | 0 | ✅ |
+| 5 PM | ↖ 8 WNW | 17 (+9)⚠️ | 82° ☀️ | 0 | ✅ |
 
-#### Sun Oct 11
+#### Mon Oct 19
 
-sun 7:09 AM–6:35 PM · student limit 14 mph
-
-| Time | Wind | Gust | Weather | Rain | Go |
-|---|---|---|---|---|---|
-| 9 AM | ↙ 3 WSW | 12 (+9)⚠️ | 59° 🌤️ | 0 | ✅ |
-| 11 AM | ↖ 6 NW | 15 (+9)⚠️ | 68° ☀️ | 0 | ✅ |
-| 1 PM | ↖ 6 NW | 15 (+9)⚠️ | 73° ☀️ | 0 | ✅ |
-| 3 PM | ↖ 8 NW | 18 (+10)⚠️ | 76° ☀️ | 0 | ✅ |
-| 5 PM | ↖ 7 NW | 18 (+11)⚠️ | 75° ☀️ | 0 | ✅ |
-
-#### Mon Oct 12
-
-sun 7:10 AM–6:34 PM · student limit 14 mph
+sun 7:17 AM–6:24 PM · student limit 14 mph
 
 | Time | Wind | Gust | Weather | Rain | Go |
 |---|---|---|---|---|---|
-| 9 AM | ↖ 3 WNW | 14 (+11)⚠️ | 58° ☀️ | 0 | ✅ |
-| 11 AM | ↖ 7 NW | 18 (+11)⚠️ | 67° ☀️ | 0 | ✅ |
-| 1 PM | ↖ 7 NW | 18 (+11)⚠️ | 72° ☀️ | 0 | ✅ |
-| 3 PM | ↑ 7 NNW | 16 (+9)⚠️ | 75° ☀️ | 0 | ✅ |
-| 5 PM | ↖ 7 NW | 15 | 74° ☀️ | 0 | ✅ |
+| 9 AM | ↙ 5 WSW | 14 (+9)⚠️ | 59° 🌤️ | 0 | ✅ |
+| 11 AM | ← 7 W | 20 (+13)⚠️ | 68° 🌤️ | 0 | ✅ |
+| 1 PM | ← 7 W | 20 (+13)⚠️ | 73° 🌤️ | 0 | ✅ |
+| 3 PM | ← 14 W | 28 (+14)❌ | 74° 🌤️ | 0 | ⚠️ |
+| 5 PM | ← 13 W | 26 (+13)❌ | 72° 🌤️ | 0 | ⚠️ |
 
 ## Safety
 
-- Santa Cruz County's page, updated October 1 from September 30 samples, shows no active bacterial beach alerts and no current domoic-acid caution. Neary Lagoon at Cowell and Soquel Creek at Capitola remain permanently posted outfalls; stay clear of both mouths and follow the county's 72-hour post-rain guidance.
-- NWS returned one Dense Fog Advisory for both points, but it expires Tuesday, October 6 at 9 AM PDT, before the forecast window. No forecast-window NWS alert was active at the Tuesday fetch.
-- The Friday-Sunday source bundle was fetched October 6 at 7:02 AM PDT. CDIP was issued at 12:46 AM PDT, and both shoreline NWS feeds were generated around 7 AM PDT. Offshore buoy 46251 observed 3.3 ft at 14 seconds from SSW at 6:26 AM PDT, consistent with meaningful south energy.
-- Monday is not safety-cleared or scored: the forecast source horizon is incomplete. Re-run before making a Monday plan.
+- Santa Cruz County's page, updated **October 7** from **October 6** samples, lists an active beach alert at **Cowell's Beach at Stairs**. The calculator gates Cowell for every Friday–Sunday sample. It also reports slightly elevated domoic acid from **Capitola to Manresa Beach** as of September 30; avoid swallowing water and skip Capitola if irritation is present or the notice escalates.
+- Neary Lagoon at Cowell and the Soquel Creek mouth at Capitola remain permanently posted. The county advises avoiding direct water contact for 72 hours after rain, especially near river mouths and storm drains.
+- NWS lists a Coastal Flood Advisory ending **Tuesday October 13 at 3 PM PDT**, before this forecast window. No NWS alert extends into Friday–Sunday, and the hourly forecast shows no rain in that period.
+- The bundle was fetched **Tuesday October 13 at 7:01 AM PDT**. CDIP issued the wave products around **12:50 AM PDT**, NWS generated the shoreline forecasts around **7:00 AM PDT**, and buoy 46236 reported at **6:30 AM PDT**. The county page is materially older and must be rechecked before entering the water.
+- Monday has incomplete wave coverage and no safety-qualified score. Do not infer Monday from Sunday.
 
 ## Sources
 
-- Surf: `Capitola Cowell Surf Forecast 20261009 - 20261012 Summary.md` — generated October 6, 2026.
-- Skydiving: `Skydive California Forecast 20261009 - 20261012 Summary.md` — generated October 6, 2026.
+- Surf: `Capitola Cowell Surf Forecast 20261016 - 20261019 Summary.md` — generated October 13, 2026.
+- Skydiving: `Skydive California Forecast 20261016 - 20261019 Summary.md` — generated October 13, 2026.
