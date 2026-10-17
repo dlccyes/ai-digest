@@ -12,7 +12,7 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 ## Workflow
 
 1. Resolve the caller inputs and the issue naming rule.
-2. Use [$resolve-codex-session-attribution](/Users/dlcc/github/agens/neocortex/skills/resolve-codex-session-attribution/SKILL.md) to resolve the generator label.
+2. Use [$resolve-session-attribution](/Users/dlcc/github/agens/neocortex/skills/resolve-session-attribution/SKILL.md) to resolve the generator label.
 3. Find the newest issue PDF in the source folder.
 4. Inspect the PDF table of contents or article headings.
 5. Choose the best article that is not already summarized in the output folder.
@@ -82,7 +82,7 @@ Create a fresh Markdown summary note for one article from the latest issue of a 
 
 - Confirm the note is in the requested output directory.
 - Confirm the frontmatter contains only `date`, `title`, and `tags`.
-- Confirm the first content line uses the generator label returned by `$resolve-codex-session-attribution`.
+- Confirm the first content line uses the generator label returned by `$resolve-session-attribution`.
 - Confirm the file is new and not a duplicate of an existing issue and article summary.
 - Confirm any literal dollar amounts in the note body use `\\$` in the Markdown source.
 - If git publish was requested, confirm the commit and push succeeded.
